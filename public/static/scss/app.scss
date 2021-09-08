@@ -1,0 +1,44 @@
+@import "./reset.scss";
+@font-face {
+    font-family:"NeoB";
+    src:url("../font/appleSDGothicNeoB.ttf");
+} 
+@font-face {
+    font-family:"NeoEB";
+    src:url("../font/appleSDGothicNeoEB.ttf");
+} 
+@font-face {
+    font-family:"NeoH";
+    src:url("../font/appleSDGothicNeoH.ttf");
+} 
+@font-face {
+    font-family:"NeoL";
+    src:url("../font/appleSDGothicNeoL.ttf");
+} 
+@font-face {
+    font-family:"NeoM";
+    src:url("../font/appleSDGothicNeoM.ttf");
+} 
+@font-face {
+    font-family:"NeoR";
+    src:url("../font/appleSDGothicNeoR.ttf");
+} 
+@font-face {
+    font-family:"NeoSB";
+    src:url("../font/appleSDGothicNeoSB.ttf");
+} 
+@font-face {
+    font-family:"NeoT";
+    src:url("../font/appleSDGothicNeoT.ttf");
+} 
+@font-face {
+    font-family:"NeoUL";
+    src:url("../font/appleSDGothicNeoUL.ttf");
+} 
+body {
+    @import "./index.scss";
+  .pink-c{
+      color:#f93873 ;
+  }
+}
+ 

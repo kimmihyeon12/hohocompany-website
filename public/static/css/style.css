@@ -1,0 +1,431 @@
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block; }
+
+[hidden] {
+  display: none; }
+
+menu,
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+img {
+  display: inline; }
+
+@font-face {
+  font-family: "NeoB";
+  src: url("../font/appleSDGothicNeoB.ttf"); }
+
+@font-face {
+  font-family: "NeoEB";
+  src: url("../font/appleSDGothicNeoEB.ttf"); }
+
+@font-face {
+  font-family: "NeoH";
+  src: url("../font/appleSDGothicNeoH.ttf"); }
+
+@font-face {
+  font-family: "NeoL";
+  src: url("../font/appleSDGothicNeoL.ttf"); }
+
+@font-face {
+  font-family: "NeoM";
+  src: url("../font/appleSDGothicNeoM.ttf"); }
+
+@font-face {
+  font-family: "NeoR";
+  src: url("../font/appleSDGothicNeoR.ttf"); }
+
+@font-face {
+  font-family: "NeoSB";
+  src: url("../font/appleSDGothicNeoSB.ttf"); }
+
+@font-face {
+  font-family: "NeoT";
+  src: url("../font/appleSDGothicNeoT.ttf"); }
+
+@font-face {
+  font-family: "NeoUL";
+  src: url("../font/appleSDGothicNeoUL.ttf"); }
+
+body .wrapper .header {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center; }
+  body .wrapper .header .inner-header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    z-index: 10; }
+    body .wrapper .header .inner-header img {
+      width: 193px;
+      height: 45px; }
+    body .wrapper .header .inner-header ul {
+      right: 0;
+      display: flex; }
+      body .wrapper .header .inner-header ul li {
+        margin-left: 19px;
+        font-size: 24px;
+        font-family: "NeoB"; }
+      body .wrapper .header .inner-header ul .bold {
+        font-family: "NeoH"; }
+
+body .wrapper .content {
+  position: absolute;
+  top: 0; }
+  body .wrapper .content .main-section1-wrap img {
+    width: 100%; }
+  body .wrapper .content .main-section2-wrap {
+    height: 49vw;
+    display: flex;
+    justify-content: center; }
+    body .wrapper .content .main-section2-wrap .main-section2-inner {
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
+      margin-top: 33px; }
+      body .wrapper .content .main-section2-wrap .main-section2-inner .desc {
+        margin-top: 18vw; }
+        body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__title {
+          display: flex;
+          align-items: center;
+          font-family: "NeoB";
+          font-size: 1.4vw;
+          margin-bottom: 10px; }
+          body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__title img {
+            margin-right: 19px;
+            width: 36px;
+            height: 36px; }
+        body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__content1 {
+          margin-left: 50px;
+          font-family: "NeoB";
+          font-size: 2.6vw;
+          letter-spacing: -2.5px;
+          margin-bottom: 10px; }
+          body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__content1 em {
+            color: #f93873; }
+        body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__content2 {
+          margin-left: 50px;
+          font-family: "NeoSB";
+          font-size: 1.4vw; }
+      body .wrapper .content .main-section2-wrap .main-section2-inner .phone-img {
+        width: 41vw;
+        height: 43.1vw; }
+  body .wrapper .content .main-section3-wrap {
+    position: relative;
+    height: 72.6vw; }
+    body .wrapper .content .main-section3-wrap .backgroud-img {
+      width: 100%;
+      height: 65vw; }
+    body .wrapper .content .main-section3-wrap .main-section3-inner {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      body .wrapper .content .main-section3-wrap .main-section3-inner .desc {
+        margin-top: 7.7vw;
+        color: white; }
+        body .wrapper .content .main-section3-wrap .main-section3-inner .desc .desc__title {
+          font-family: "NeoB";
+          font-size: 2.6vw;
+          margin-bottom: 3vw; }
+        body .wrapper .content .main-section3-wrap .main-section3-inner .desc .desc__content {
+          font-family: "NeoSB";
+          font-size: 1.4vw;
+          margin-bottom: 5vw;
+          text-align: center; }
+      body .wrapper .content .main-section3-wrap .main-section3-inner .phone-img {
+        width: 22.2vw;
+        height: 40.7vw; }
+      body .wrapper .content .main-section3-wrap .main-section3-inner .text1 {
+        position: absolute;
+        width: 23.3vw;
+        top: 36vw;
+        left: 13.5%; }
+      body .wrapper .content .main-section3-wrap .main-section3-inner .text2 {
+        position: absolute;
+        top: 50.4vw;
+        left: 18%;
+        width: 18.7vw; }
+      body .wrapper .content .main-section3-wrap .main-section3-inner .text3 {
+        position: absolute;
+        top: 33.1vw;
+        left: 61%;
+        width: 25.7vw; }
+      body .wrapper .content .main-section3-wrap .main-section3-inner .text4 {
+        position: absolute;
+        top: 44.6vw;
+        left: 61%;
+        width: 18.8vw; }
+  body .wrapper .content .main-section4-wrap {
+    height: 29.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    body .wrapper .content .main-section4-wrap .main-section4-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      body .wrapper .content .main-section4-wrap .main-section4-inner .desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        body .wrapper .content .main-section4-wrap .main-section4-inner .desc .desc__title {
+          font-size: 2.6vw;
+          font-family: "NeoB";
+          letter-spacing: -2.5px;
+          margin-bottom: 15px; }
+        body .wrapper .content .main-section4-wrap .main-section4-inner .desc .desc__content {
+          font-size: 1.4vw;
+          font-family: "NeoB";
+          margin-bottom: 46px; }
+      body .wrapper .content .main-section4-wrap .main-section4-inner .icon-group {
+        width: 46.5vw; }
+  body .wrapper .content .main-section5-wrap {
+    border: 1px solid black;
+    height: 49vw; }
+  body .wrapper .content .main-section6-wrap {
+    border: 1px solid black;
+    height: 49vw;
+    display: flex;
+    justify-content: center; }
+    body .wrapper .content .main-section6-wrap .main-section6-inner {
+      width: 80%;
+      display: flex; }
+      body .wrapper .content .main-section6-wrap .main-section6-inner .desc {
+        display: flex;
+        margin-top: 14.6vw; }
+        body .wrapper .content .main-section6-wrap .main-section6-inner .desc > img {
+          width: 36px;
+          height: 36px;
+          margin-top: 14px;
+          margin-right: 28.9px; }
+        body .wrapper .content .main-section6-wrap .main-section6-inner .desc .desc__title {
+          font-size: 2.6vw;
+          font-family: "NeoB";
+          margin-bottom: 10px; }
+        body .wrapper .content .main-section6-wrap .main-section6-inner .desc .desc__content {
+          font-size: 1.4vw;
+          font-family: "NeoSB";
+          margin-bottom: 20px; }
+        body .wrapper .content .main-section6-wrap .main-section6-inner .desc .desc__content-img img {
+          width: 24vw; }
+      body .wrapper .content .main-section6-wrap .main-section6-inner .phone-img {
+        margin-top: 50px;
+        margin-left: 70px;
+        width: 45vw;
+        height: 47vw; }
+  body .wrapper .content .main-section7-wrap {
+    height: 49vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 12vw; }
+    body .wrapper .content .main-section7-wrap .card-img {
+      width: 51.4vw; }
+    body .wrapper .content .main-section7-wrap .desc {
+      display: flex;
+      margin-left: 25px; }
+      body .wrapper .content .main-section7-wrap .desc .desc__title {
+        font-size: 2.6vw;
+        letter-spacing: -2.5px;
+        font-family: "NeoR";
+        margin-right: 5vw; }
+        body .wrapper .content .main-section7-wrap .desc .desc__title em {
+          font-family: "NeoB"; }
+      body .wrapper .content .main-section7-wrap .desc .desc__content {
+        font-size: 1.4vw;
+        font-family: "NeoSB"; }
+  body .wrapper .content .main-section8-wrap .instagram .instagram__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px; }
+    body .wrapper .content .main-section8-wrap .instagram .instagram__title .b-in {
+      font-size: 2.6vw;
+      font-family: "NeoEB";
+      margin-left: 11vw;
+      margin-right: 10px; }
+    body .wrapper .content .main-section8-wrap .instagram .instagram__title .sm-tag {
+      font-size: 1.4vw;
+      font-family: "NeoSB"; }
+  body .wrapper .content .main-section8-wrap .instagram .instagram__slider {
+    margin-bottom: 6.2vw; }
+    body .wrapper .content .main-section8-wrap .instagram .instagram__slider .card-img {
+      width: 14vw;
+      margin-left: 50px; }
+  body .wrapper .content .main-section8-wrap .news {
+    margin-left: 11vw; }
+    body .wrapper .content .main-section8-wrap .news > p {
+      font-size: 2.6vw;
+      font-family: "NeoR";
+      letter-spacing: -2.5px; }
+      body .wrapper .content .main-section8-wrap .news > p em {
+        font-family: "NeoEB"; }
+    body .wrapper .content .main-section8-wrap .news .news-inner {
+      margin-left: 6vw;
+      display: flex; }
+      body .wrapper .content .main-section8-wrap .news .news-inner li {
+        width: 23.4vw; }
+        body .wrapper .content .main-section8-wrap .news .news-inner li .card-img {
+          width: 23.4vw;
+          margin-top: 4vw; }
+        body .wrapper .content .main-section8-wrap .news .news-inner li .news1__title {
+          padding: 0px 38px;
+          font-size: 1.4vw;
+          font-family: "NeoB"; }
+        body .wrapper .content .main-section8-wrap .news .news-inner li .news1__date {
+          padding: 10px 38px;
+          font-size: 1vw;
+          font-family: "NeoM";
+          color: #7d7d7d; }
+    body .wrapper .content .main-section8-wrap .news .news-btn-wrap {
+      margin-top: 3.1vw;
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      body .wrapper .content .main-section8-wrap .news .news-btn-wrap .news-btn {
+        width: 16.1vw; }
+  body .wrapper .content .main-section8-wrap .company-info .company-info-wrap {
+    position: relative; }
+    body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li {
+      color: white; }
+      body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .info-img {
+        position: absolute;
+        width: 34.8vw; }
+      body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc-wrap {
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        font-size: 1.4vw;
+        font-family: "NeoB"; }
+        body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc-wrap .desc__content {
+          width: 14vw;
+          font-size: 1.1vw;
+          font-family: "NeoSB"; }
+
+body .pink-c {
+  color: #f93873; }
