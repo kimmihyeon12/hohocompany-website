@@ -13,6 +13,7 @@
             width: 80%;
             align-items: center;
             z-index: 10;
+            position: fixed;
 
             img {
                 width: 193px;
@@ -44,9 +45,169 @@
         top: 0;
 
         .main-section1-wrap {
-            img {
-                width: 100%;
+            .slider-button {
+                top:43vw;
+                left:12vw;
+                z-index: 10;
+                position: absolute;
+                color: white;
+                display: flex;
+                align-items: center;
+                font-family: "NeoB";
+                font-size: 1.2vw;
+
+                .left {
+                    width: 0.8vw;
+                   
+                    margin-right: 14px;
+                }
+
+                .bar {
+                    margin: 0px 9px;
+                    width: 83px;
+                    height: 7px;
+                }
+
+                .right {
+                    margin-left: 14px;
+                    width: 0.8vw;
+                }
             }
+
+            .banner-wrap {
+                display: flex;
+              
+
+                img {
+                    width: 100vw;
+                }
+
+               
+                .slider-img1 {
+                    position: relative;
+
+                    .text-wrap {
+                        letter-spacing: -3px;
+                        line-height: 3.6vw;
+                        position: absolute;
+                        top: 17.2vw;
+                        left: 10.9vw;
+
+                        p {
+                            font-size: 1.9vw;
+                            font-family: "NeoB";
+                        }
+
+                        .big-font {
+                            font-size: 3.1vw;
+                            font-family: "NeoEB";
+
+                            em {
+                                box-shadow: inset 0 -30px orange;
+
+
+                            }
+                        }
+                    }
+
+                }
+
+                .slider-img2 {
+                    position: relative;
+
+                    .text-wrap {
+                        position: absolute;
+                        top: 20.2vw;
+                        left: 10.7vw;
+                        font-family: "NeoM";
+                        line-height: 3.6vw;
+
+                        p {
+                            font-size: 3.1vw;
+
+                        }
+
+                        .big-font {
+                            font-size: 3.1vw;
+                            font-family: "NeoH";
+                            color: #f28446;
+
+                        }
+                    }
+
+                }
+
+                .slider-img3 {
+                    position: relative;
+
+                    .text-wrap {
+                        position: absolute;
+                        top: 17.2vw;
+                        left: 10.9vw;
+                        line-height: 3.6vw;
+
+                        p {
+                            font-size: 1.9vw;
+                            font-family: "NeoB";
+
+                        }
+
+                        .big-font {
+                            font-size: 3.1vw;
+                            font-family: "NeoM";
+
+                            em {
+                                color: #f5967a;
+                                font-family: "NeoH";
+                            }
+                        }
+                    }
+
+                }
+
+                .slider-img4 {
+                    position: relative;
+
+                    .text-wrap {
+                        position: absolute;
+                        top: 16.6vw;
+                        left: 10.9vw;
+                        line-height: 3.6vw;
+
+                        p {
+                            font-size: 3.1vw;
+                            font-family: "NeoSB";
+
+                        }
+
+                        .big-font {
+                            font-size: 3.1vw;
+                            font-family: "NeoSB";
+
+                            em {
+                                color: #d9427a;
+                                font-family: "NeoH";
+                            }
+                        }
+
+                        .download-button {
+
+                            img {
+                                width: 11.8vw;
+
+                            }
+
+                            .appstore {
+                                margin-right: 1vw;
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+
 
         }
 
@@ -54,8 +215,10 @@
             height: 49vw;
             display: flex;
             justify-content: center;
+            width: 100vw;
 
             .main-section2-inner {
+
                 display: flex;
                 width: 80%;
                 justify-content: space-between;
@@ -63,6 +226,8 @@
 
                 .desc {
                     margin-top: 18vw;
+                    transition: 1.2s;
+
 
                     .desc__title {
                         display: flex;
@@ -102,6 +267,7 @@
                 }
 
                 .phone-img {
+                    transition: 0.5s;
                     width: 41vw;
                     height: 43.1vw;
                 }
@@ -110,6 +276,7 @@
         }
 
         .main-section3-wrap {
+            width: 100vw;
             position: relative;
             height: 72.6vw;
 
@@ -149,14 +316,19 @@
                 .phone-img {
                     width: 22.2vw;
                     height: 40.7vw;
-
+                    animation-name: phoneImg;
                 }
+
+
 
                 .text1 {
                     position: absolute;
                     width: 23.3vw;
                     top: 36vw;
                     left: 13.5%;
+                    animation-name: bounce;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
                 }
 
                 .text2 {
@@ -164,26 +336,35 @@
                     top: 50.4vw;
                     left: 18%;
                     width: 18.7vw;
+                    animation-name: bounce;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
                 }
 
                 .text3 {
                     position: absolute;
-                    top: 33.1vw;
+                    top: 38.1vw;
                     left: 61%;
                     width: 25.7vw;
+                    animation-name: bounce;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
                 }
 
                 .text4 {
                     position: absolute;
-                    top: 44.6vw;
+                    top: 50.6vw;
                     left: 61%;
                     width: 18.8vw;
+                    animation-name: bounce;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
                 }
             }
         }
 
         .main-section4-wrap {
-
+            width: 100vw;
             height: 29.5vw;
             display: flex;
             flex-direction: column;
@@ -223,11 +404,13 @@
         }
 
         .main-section5-wrap {
+            width: 100vw;
             border: 1px solid black;
             height: 49vw;
         }
 
         .main-section6-wrap {
+            width: 100vw;
             border: 1px solid black;
             height: 49vw;
             display: flex;
@@ -281,19 +464,27 @@
         }
 
         .main-section7-wrap {
-
+            width: 100vw;
             height: 49vw;
             display: flex;
             justify-content: center;
             margin-top: 12vw;
+            flex-direction: column;
+            align-items: center;
 
             .card-img {
                 width: 51.4vw;
+                transition: 1s;
+
+            }
+
+            .card-img:hover {
+                width: 57.4vw;
             }
 
             .desc {
                 display: flex;
-                margin-left: 25px;
+
 
                 .desc__title {
                     font-size: 2.6vw;
@@ -315,6 +506,8 @@
         }
 
         .main-section8-wrap {
+            width: 100vw;
+
             .instagram {
 
 
@@ -391,7 +584,7 @@
 
                 .news-btn-wrap {
                     margin-top: 3.1vw;
-                    width: 100%;
+                    width: 89%;
                     display: flex;
                     justify-content: center;
 
@@ -403,34 +596,125 @@
             }
 
             .company-info {
+                margin-top: 10vw;
+
                 .company-info-wrap {
-                   
+                    display: flex;
+                    color: white;
+                    justify-content: center;
+
+
+
+                    .desc1-wrap {
+                        width: 34.8vw;
+                        height: 10.4vw;
+                        background-image: url(../img/main-section8/company-info1.png);
+                        background-size: 34.8vw 10.4vw;
+                        margin-right: 4.7vw;
+                        display: flex;
+
+                        .desc__title {
+                            margin-top: 2.13vw;
+                            margin-left: 1.45vw;
+                            font-size: 1.4vw;
+                            font-family: "NeoB";
+                        }
+
+                        .desc__content {
+                            margin-left: 1.45vw;
+                            font-size: 1.2vw;
+                            font-family: "NeoSB";
+
+                        }
+
+                        img {
+                            width: 9.8vw;
+                            height: 3vw;
+                            margin-left: 8.33vw;
+                            margin-top: 6.14vw;
+                        }
+
+
+                    }
+
+                    .desc2-wrap {
+                        width: 34.8vw;
+                        height: 10.4vw;
+                        background-image: url(../img/main-section8/company-info1.png);
+                        background-size: 34.8vw 10.4vw;
+
+                        display: flex;
+
+                        .desc__title {
+                            margin-top: 2.13vw;
+                            margin-left: 1.45vw;
+                            font-size: 1.4vw;
+                            font-family: "NeoB";
+                        }
+
+                        .desc__content {
+                            margin-top: 1.77vw;
+                            margin-left: 1.45vw;
+                            font-size: 1.2vw;
+                            font-family: "NeoSB";
+
+                        }
+
+                        img {
+                            width: 9.8vw;
+                            height: 3vw;
+                            margin-left: 4.16vw;
+                            margin-top: 6.14vw;
+                        }
+                    }
+
+                }
+            }
+
+            .store-download {
+                margin-left: 10.9vw;
+
+                .img-wrap {
                     position: relative;
-                        li {
-                            
-                           color: white;
 
-                            .info-img {
-                                position: absolute;
-                                width: 34.8vw;
-                           
+                    img {
+                        position: absolute;
+                        width: 89vw;
+                    }
+
+                    .text-wrap {
+                        margin-left: 28vw;
+                        position: absolute;
+
+                        color: white;
+                        margin-top: 17.2vw;
+
+                        p {
+                            text-align: center;
+                            font-size: 1.66vw;
+                            font-family: "NeoB";
+
+                            em {
+                                font-size: 1.97vw;
+                                font-family: "NeoEB";
                             }
+                        }
+                    }
 
-                            .desc-wrap {position: absolute;
-                                top: 0;
-                                z-index: 10;
-                                font-size: 1.4vw;
-                                font-family: "NeoB";
-                                .desc__content{
-                                    width: 14vw;
-                                    font-size: 1.1vw;
-                                    font-family: "NeoSB";
-                                }
-                       
+                    .download-wrap {
+                        position: absolute;
+                        top: 23.2vw;
 
+                        .app {
+                            width: 12.4vw;
+                            margin-left: 26vw;
+                        }
 
-                            }
-                     
+                        .google {
+                            width: 12.4vw;
+                            margin-left: 40.4vw;
+
+                        }
                     }
                 }
             }

@@ -167,6 +167,14 @@ img {
   font-family: "NeoUL";
   src: url("../font/appleSDGothicNeoUL.ttf"); }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-30px); }
+  100% {
+    transform: translateY(0px); } }
+
 body .wrapper .header {
   margin-top: 55px;
   display: flex;
@@ -177,7 +185,8 @@ body .wrapper .header {
     justify-content: space-between;
     width: 80%;
     align-items: center;
-    z-index: 10; }
+    z-index: 10;
+    position: fixed; }
     body .wrapper .header .inner-header img {
       width: 193px;
       height: 45px; }
@@ -194,19 +203,109 @@ body .wrapper .header {
 body .wrapper .content {
   position: absolute;
   top: 0; }
-  body .wrapper .content .main-section1-wrap img {
-    width: 100%; }
+  body .wrapper .content .main-section1-wrap .slider-button {
+    top: 43vw;
+    left: 12vw;
+    z-index: 10;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: "NeoB";
+    font-size: 1.2vw; }
+    body .wrapper .content .main-section1-wrap .slider-button .left {
+      width: 0.8vw;
+      margin-right: 14px; }
+    body .wrapper .content .main-section1-wrap .slider-button .bar {
+      margin: 0px 9px;
+      width: 83px;
+      height: 7px; }
+    body .wrapper .content .main-section1-wrap .slider-button .right {
+      margin-left: 14px;
+      width: 0.8vw; }
+  body .wrapper .content .main-section1-wrap .banner-wrap {
+    display: flex; }
+    body .wrapper .content .main-section1-wrap .banner-wrap img {
+      width: 100vw; }
+    body .wrapper .content .main-section1-wrap .banner-wrap .slider-img1 {
+      position: relative; }
+      body .wrapper .content .main-section1-wrap .banner-wrap .slider-img1 .text-wrap {
+        letter-spacing: -3px;
+        line-height: 3.6vw;
+        position: absolute;
+        top: 17.2vw;
+        left: 10.9vw; }
+        body .wrapper .content .main-section1-wrap .banner-wrap .slider-img1 .text-wrap p {
+          font-size: 1.9vw;
+          font-family: "NeoB"; }
+        body .wrapper .content .main-section1-wrap .banner-wrap .slider-img1 .text-wrap .big-font {
+          font-size: 3.1vw;
+          font-family: "NeoEB"; }
+          body .wrapper .content .main-section1-wrap .banner-wrap .slider-img1 .text-wrap .big-font em {
+            box-shadow: inset 0 -30px orange; }
+    body .wrapper .content .main-section1-wrap .banner-wrap .slider-img2 {
+      position: relative; }
+      body .wrapper .content .main-section1-wrap .banner-wrap .slider-img2 .text-wrap {
+        position: absolute;
+        top: 20.2vw;
+        left: 10.7vw;
+        font-family: "NeoM";
+        line-height: 3.6vw; }
+        body .wrapper .content .main-section1-wrap .banner-wrap .slider-img2 .text-wrap p {
+          font-size: 3.1vw; }
+        body .wrapper .content .main-section1-wrap .banner-wrap .slider-img2 .text-wrap .big-font {
+          font-size: 3.1vw;
+          font-family: "NeoH";
+          color: #f28446; }
+    body .wrapper .content .main-section1-wrap .banner-wrap .slider-img3 {
+      position: relative; }
+      body .wrapper .content .main-section1-wrap .banner-wrap .slider-img3 .text-wrap {
+        position: absolute;
+        top: 17.2vw;
+        left: 10.9vw;
+        line-height: 3.6vw; }
+        body .wrapper .content .main-section1-wrap .banner-wrap .slider-img3 .text-wrap p {
+          font-size: 1.9vw;
+          font-family: "NeoB"; }
+        body .wrapper .content .main-section1-wrap .banner-wrap .slider-img3 .text-wrap .big-font {
+          font-size: 3.1vw;
+          font-family: "NeoM"; }
+          body .wrapper .content .main-section1-wrap .banner-wrap .slider-img3 .text-wrap .big-font em {
+            color: #f5967a;
+            font-family: "NeoH"; }
+    body .wrapper .content .main-section1-wrap .banner-wrap .slider-img4 {
+      position: relative; }
+      body .wrapper .content .main-section1-wrap .banner-wrap .slider-img4 .text-wrap {
+        position: absolute;
+        top: 16.6vw;
+        left: 10.9vw;
+        line-height: 3.6vw; }
+        body .wrapper .content .main-section1-wrap .banner-wrap .slider-img4 .text-wrap p {
+          font-size: 3.1vw;
+          font-family: "NeoSB"; }
+        body .wrapper .content .main-section1-wrap .banner-wrap .slider-img4 .text-wrap .big-font {
+          font-size: 3.1vw;
+          font-family: "NeoSB"; }
+          body .wrapper .content .main-section1-wrap .banner-wrap .slider-img4 .text-wrap .big-font em {
+            color: #d9427a;
+            font-family: "NeoH"; }
+        body .wrapper .content .main-section1-wrap .banner-wrap .slider-img4 .text-wrap .download-button img {
+          width: 11.8vw; }
+        body .wrapper .content .main-section1-wrap .banner-wrap .slider-img4 .text-wrap .download-button .appstore {
+          margin-right: 1vw; }
   body .wrapper .content .main-section2-wrap {
     height: 49vw;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    width: 100vw; }
     body .wrapper .content .main-section2-wrap .main-section2-inner {
       display: flex;
       width: 80%;
       justify-content: space-between;
       margin-top: 33px; }
       body .wrapper .content .main-section2-wrap .main-section2-inner .desc {
-        margin-top: 18vw; }
+        margin-top: 18vw;
+        transition: 1.2s; }
         body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__title {
           display: flex;
           align-items: center;
@@ -230,9 +329,11 @@ body .wrapper .content {
           font-family: "NeoSB";
           font-size: 1.4vw; }
       body .wrapper .content .main-section2-wrap .main-section2-inner .phone-img {
+        transition: 0.5s;
         width: 41vw;
         height: 43.1vw; }
   body .wrapper .content .main-section3-wrap {
+    width: 100vw;
     position: relative;
     height: 72.6vw; }
     body .wrapper .content .main-section3-wrap .backgroud-img {
@@ -259,28 +360,42 @@ body .wrapper .content {
           text-align: center; }
       body .wrapper .content .main-section3-wrap .main-section3-inner .phone-img {
         width: 22.2vw;
-        height: 40.7vw; }
+        height: 40.7vw;
+        animation-name: phoneImg; }
       body .wrapper .content .main-section3-wrap .main-section3-inner .text1 {
         position: absolute;
         width: 23.3vw;
         top: 36vw;
-        left: 13.5%; }
+        left: 13.5%;
+        animation-name: bounce;
+        animation-duration: 5s;
+        animation-iteration-count: infinite; }
       body .wrapper .content .main-section3-wrap .main-section3-inner .text2 {
         position: absolute;
         top: 50.4vw;
         left: 18%;
-        width: 18.7vw; }
+        width: 18.7vw;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite; }
       body .wrapper .content .main-section3-wrap .main-section3-inner .text3 {
         position: absolute;
-        top: 33.1vw;
+        top: 38.1vw;
         left: 61%;
-        width: 25.7vw; }
+        width: 25.7vw;
+        animation-name: bounce;
+        animation-duration: 5s;
+        animation-iteration-count: infinite; }
       body .wrapper .content .main-section3-wrap .main-section3-inner .text4 {
         position: absolute;
-        top: 44.6vw;
+        top: 50.6vw;
         left: 61%;
-        width: 18.8vw; }
+        width: 18.8vw;
+        animation-name: bounce;
+        animation-duration: 3s;
+        animation-iteration-count: infinite; }
   body .wrapper .content .main-section4-wrap {
+    width: 100vw;
     height: 29.5vw;
     display: flex;
     flex-direction: column;
@@ -307,9 +422,11 @@ body .wrapper .content {
       body .wrapper .content .main-section4-wrap .main-section4-inner .icon-group {
         width: 46.5vw; }
   body .wrapper .content .main-section5-wrap {
+    width: 100vw;
     border: 1px solid black;
     height: 49vw; }
   body .wrapper .content .main-section6-wrap {
+    width: 100vw;
     border: 1px solid black;
     height: 49vw;
     display: flex;
@@ -341,15 +458,20 @@ body .wrapper .content {
         width: 45vw;
         height: 47vw; }
   body .wrapper .content .main-section7-wrap {
+    width: 100vw;
     height: 49vw;
     display: flex;
     justify-content: center;
-    margin-top: 12vw; }
+    margin-top: 12vw;
+    flex-direction: column;
+    align-items: center; }
     body .wrapper .content .main-section7-wrap .card-img {
-      width: 51.4vw; }
+      width: 51.4vw;
+      transition: 1s; }
+    body .wrapper .content .main-section7-wrap .card-img:hover {
+      width: 57.4vw; }
     body .wrapper .content .main-section7-wrap .desc {
-      display: flex;
-      margin-left: 25px; }
+      display: flex; }
       body .wrapper .content .main-section7-wrap .desc .desc__title {
         font-size: 2.6vw;
         letter-spacing: -2.5px;
@@ -360,72 +482,133 @@ body .wrapper .content {
       body .wrapper .content .main-section7-wrap .desc .desc__content {
         font-size: 1.4vw;
         font-family: "NeoSB"; }
-  body .wrapper .content .main-section8-wrap .instagram .instagram__title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 32px; }
-    body .wrapper .content .main-section8-wrap .instagram .instagram__title .b-in {
-      font-size: 2.6vw;
-      font-family: "NeoEB";
-      margin-left: 11vw;
-      margin-right: 10px; }
-    body .wrapper .content .main-section8-wrap .instagram .instagram__title .sm-tag {
-      font-size: 1.4vw;
-      font-family: "NeoSB"; }
-  body .wrapper .content .main-section8-wrap .instagram .instagram__slider {
-    margin-bottom: 6.2vw; }
-    body .wrapper .content .main-section8-wrap .instagram .instagram__slider .card-img {
-      width: 14vw;
-      margin-left: 50px; }
-  body .wrapper .content .main-section8-wrap .news {
-    margin-left: 11vw; }
-    body .wrapper .content .main-section8-wrap .news > p {
-      font-size: 2.6vw;
-      font-family: "NeoR";
-      letter-spacing: -2.5px; }
-      body .wrapper .content .main-section8-wrap .news > p em {
-        font-family: "NeoEB"; }
-    body .wrapper .content .main-section8-wrap .news .news-inner {
-      margin-left: 6vw;
-      display: flex; }
-      body .wrapper .content .main-section8-wrap .news .news-inner li {
-        width: 23.4vw; }
-        body .wrapper .content .main-section8-wrap .news .news-inner li .card-img {
-          width: 23.4vw;
-          margin-top: 4vw; }
-        body .wrapper .content .main-section8-wrap .news .news-inner li .news1__title {
-          padding: 0px 38px;
-          font-size: 1.4vw;
-          font-family: "NeoB"; }
-        body .wrapper .content .main-section8-wrap .news .news-inner li .news1__date {
-          padding: 10px 38px;
-          font-size: 1vw;
-          font-family: "NeoM";
-          color: #7d7d7d; }
-    body .wrapper .content .main-section8-wrap .news .news-btn-wrap {
-      margin-top: 3.1vw;
-      width: 100%;
+  body .wrapper .content .main-section8-wrap {
+    width: 100vw; }
+    body .wrapper .content .main-section8-wrap .instagram .instagram__title {
       display: flex;
-      justify-content: center; }
-      body .wrapper .content .main-section8-wrap .news .news-btn-wrap .news-btn {
-        width: 16.1vw; }
-  body .wrapper .content .main-section8-wrap .company-info .company-info-wrap {
-    position: relative; }
-    body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li {
-      color: white; }
-      body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .info-img {
-        position: absolute;
-        width: 34.8vw; }
-      body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc-wrap {
-        position: absolute;
-        top: 0;
-        z-index: 10;
+      align-items: center;
+      margin-bottom: 32px; }
+      body .wrapper .content .main-section8-wrap .instagram .instagram__title .b-in {
+        font-size: 2.6vw;
+        font-family: "NeoEB";
+        margin-left: 11vw;
+        margin-right: 10px; }
+      body .wrapper .content .main-section8-wrap .instagram .instagram__title .sm-tag {
         font-size: 1.4vw;
-        font-family: "NeoB"; }
-        body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc-wrap .desc__content {
-          width: 14vw;
-          font-size: 1.1vw;
-          font-family: "NeoSB"; }
+        font-family: "NeoSB"; }
+    body .wrapper .content .main-section8-wrap .instagram .instagram__slider {
+      margin-bottom: 6.2vw; }
+      body .wrapper .content .main-section8-wrap .instagram .instagram__slider .card-img {
+        width: 14vw;
+        margin-left: 50px; }
+    body .wrapper .content .main-section8-wrap .news {
+      margin-left: 11vw; }
+      body .wrapper .content .main-section8-wrap .news > p {
+        font-size: 2.6vw;
+        font-family: "NeoR";
+        letter-spacing: -2.5px; }
+        body .wrapper .content .main-section8-wrap .news > p em {
+          font-family: "NeoEB"; }
+      body .wrapper .content .main-section8-wrap .news .news-inner {
+        margin-left: 6vw;
+        display: flex; }
+        body .wrapper .content .main-section8-wrap .news .news-inner li {
+          width: 23.4vw; }
+          body .wrapper .content .main-section8-wrap .news .news-inner li .card-img {
+            width: 23.4vw;
+            margin-top: 4vw; }
+          body .wrapper .content .main-section8-wrap .news .news-inner li .news1__title {
+            padding: 0px 38px;
+            font-size: 1.4vw;
+            font-family: "NeoB"; }
+          body .wrapper .content .main-section8-wrap .news .news-inner li .news1__date {
+            padding: 10px 38px;
+            font-size: 1vw;
+            font-family: "NeoM";
+            color: #7d7d7d; }
+      body .wrapper .content .main-section8-wrap .news .news-btn-wrap {
+        margin-top: 3.1vw;
+        width: 89%;
+        display: flex;
+        justify-content: center; }
+        body .wrapper .content .main-section8-wrap .news .news-btn-wrap .news-btn {
+          width: 16.1vw; }
+    body .wrapper .content .main-section8-wrap .company-info {
+      margin-top: 10vw; }
+      body .wrapper .content .main-section8-wrap .company-info .company-info-wrap {
+        display: flex;
+        color: white;
+        justify-content: center; }
+        body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc1-wrap {
+          width: 34.8vw;
+          height: 10.4vw;
+          background-image: url(../img/main-section8/company-info1.png);
+          background-size: 34.8vw 10.4vw;
+          margin-right: 4.7vw;
+          display: flex; }
+          body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc1-wrap .desc__title {
+            margin-top: 2.13vw;
+            margin-left: 1.45vw;
+            font-size: 1.4vw;
+            font-family: "NeoB"; }
+          body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc1-wrap .desc__content {
+            margin-left: 1.45vw;
+            font-size: 1.2vw;
+            font-family: "NeoSB"; }
+          body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc1-wrap img {
+            width: 9.8vw;
+            height: 3vw;
+            margin-left: 8.33vw;
+            margin-top: 6.14vw; }
+        body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap {
+          width: 34.8vw;
+          height: 10.4vw;
+          background-image: url(../img/main-section8/company-info1.png);
+          background-size: 34.8vw 10.4vw;
+          display: flex; }
+          body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap .desc__title {
+            margin-top: 2.13vw;
+            margin-left: 1.45vw;
+            font-size: 1.4vw;
+            font-family: "NeoB"; }
+          body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap .desc__content {
+            margin-top: 1.77vw;
+            margin-left: 1.45vw;
+            font-size: 1.2vw;
+            font-family: "NeoSB"; }
+          body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap img {
+            width: 9.8vw;
+            height: 3vw;
+            margin-left: 4.16vw;
+            margin-top: 6.14vw; }
+    body .wrapper .content .main-section8-wrap .store-download {
+      margin-left: 10.9vw; }
+      body .wrapper .content .main-section8-wrap .store-download .img-wrap {
+        position: relative; }
+        body .wrapper .content .main-section8-wrap .store-download .img-wrap img {
+          position: absolute;
+          width: 89vw; }
+        body .wrapper .content .main-section8-wrap .store-download .img-wrap .text-wrap {
+          margin-left: 28vw;
+          position: absolute;
+          color: white;
+          margin-top: 17.2vw; }
+          body .wrapper .content .main-section8-wrap .store-download .img-wrap .text-wrap p {
+            text-align: center;
+            font-size: 1.66vw;
+            font-family: "NeoB"; }
+            body .wrapper .content .main-section8-wrap .store-download .img-wrap .text-wrap p em {
+              font-size: 1.97vw;
+              font-family: "NeoEB"; }
+        body .wrapper .content .main-section8-wrap .store-download .img-wrap .download-wrap {
+          position: absolute;
+          top: 23.2vw; }
+          body .wrapper .content .main-section8-wrap .store-download .img-wrap .download-wrap .app {
+            width: 12.4vw;
+            margin-left: 26vw; }
+          body .wrapper .content .main-section8-wrap .store-download .img-wrap .download-wrap .google {
+            width: 12.4vw;
+            margin-left: 40.4vw; }
 
 body .pink-c {
   color: #f93873; }

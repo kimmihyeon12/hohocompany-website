@@ -35,8 +35,14 @@
     font-family:"NeoUL";
     src:url("../font/appleSDGothicNeoUL.ttf");
 } 
+@keyframes  bounce {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-30px);}
+    100% {transform: translateY(0px);}
+} 
 body {
     @import "./index.scss";
+ 
   .pink-c{
       color:#f93873 ;
   }
