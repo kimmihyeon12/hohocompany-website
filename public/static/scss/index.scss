@@ -46,8 +46,8 @@
 
         .main-section1-wrap {
             .slider-button {
-                top:43vw;
-                left:12vw;
+                top: 43vw;
+                left: 12vw;
                 z-index: 10;
                 position: absolute;
                 color: white;
@@ -58,14 +58,28 @@
 
                 .left {
                     width: 0.8vw;
-                   
+
                     margin-right: 14px;
                 }
 
-                .bar {
+
+                .bar-wrap {
+                    position: relative;
                     margin: 0px 9px;
                     width: 83px;
                     height: 7px;
+                    border-radius: 30px;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    ;
+
+                    .bar {
+                        position: absolute;
+
+                        width: 10px;
+                        height: 7px;
+                        border-radius: 30px;
+                        background-color: white;
+                    }
                 }
 
                 .right {
@@ -73,20 +87,30 @@
                     width: 0.8vw;
                 }
             }
+            .mouse{
+                position: absolute;
+                top:45vw;
+                left:49vw; 
+                animation-name: bounce;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
 
             .banner-wrap {
                 display: flex;
-              
+
 
                 img {
                     width: 100vw;
                 }
 
-               
+
                 .slider-img1 {
                     position: relative;
 
                     .text-wrap {
+                        width: 50vw;
+                        position: relative;
                         letter-spacing: -3px;
                         line-height: 3.6vw;
                         position: absolute;
@@ -94,19 +118,25 @@
                         left: 10.9vw;
 
                         p {
+                            position: absolute;
+
                             font-size: 1.9vw;
                             font-family: "NeoB";
+                            z-index: 10;
                         }
 
                         .big-font {
+                            position: absolute;
+                            top: 3.4vw;
                             font-size: 3.1vw;
                             font-family: "NeoEB";
 
-                            em {
-                                box-shadow: inset 0 -30px orange;
+                        }
 
-
-                            }
+                        .high-light {
+                            position: absolute;
+                            top: 4.9vw;
+                            width: 11.6vw;
                         }
                     }
 
@@ -407,6 +437,15 @@
             width: 100vw;
             border: 1px solid black;
             height: 49vw;
+            overflow-x: hidden;
+            .slider-wrap{
+              
+                display: flex;
+                margin-left: -150px;
+                img{
+                    width: 330px;
+                }
+            }
         }
 
         .main-section6-wrap {
