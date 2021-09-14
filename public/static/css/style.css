@@ -448,8 +448,7 @@ body .wrapper .content {
   body .wrapper .content .main-section5-wrap {
     width: 100vw;
     border: 1px solid black;
-    height: 49vw;
-    overflow-x: hidden; }
+    height: 49vw; }
     body .wrapper .content .main-section5-wrap .slider-wrap {
       display: flex;
       margin-left: -150px; }
@@ -526,9 +525,26 @@ body .wrapper .content {
       body .wrapper .content .main-section8-wrap .instagram .instagram__title .sm-tag {
         font-size: 1.4vw;
         font-family: "NeoSB"; }
-    body .wrapper .content .main-section8-wrap .instagram .instagram__slider {
+    body .wrapper .content .main-section8-wrap .instagram .instagram__slide_wrapper {
+      position: relative;
+      width: 100vw;
+      margin: 0 auto;
+      height: 14vw;
+      overflow: hidden;
       margin-bottom: 6.2vw; }
-      body .wrapper .content .main-section8-wrap .instagram .instagram__slider .card-img {
+      body .wrapper .content .main-section8-wrap .instagram .instagram__slide_wrapper .slides {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-left: 9vw; }
+        body .wrapper .content .main-section8-wrap .instagram .instagram__slide_wrapper .slides li {
+          width: 14vw;
+          height: 14vw;
+          float: left;
+          margin-right: 2.6vw; }
+      body .wrapper .content .main-section8-wrap .instagram .instagram__slide_wrapper .slides.animated {
+        transition: 0.5s ease-out; }
+      body .wrapper .content .main-section8-wrap .instagram .instagram__slide_wrapper .card-img {
         width: 14vw;
         margin-left: 50px; }
     body .wrapper .content .main-section8-wrap .news {

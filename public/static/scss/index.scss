@@ -437,7 +437,7 @@
             width: 100vw;
             border: 1px solid black;
             height: 49vw;
-            overflow-x: hidden;
+          
             .slider-wrap{
               
                 display: flex;
@@ -568,9 +568,29 @@
                     }
                 }
 
-                .instagram__slider {
+                .instagram__slide_wrapper {
+                    position: relative;
+                    width: 100vw;
+                    margin: 0 auto;
+                    height: 14vw;
+                    overflow: hidden;
                     margin-bottom: 6.2vw;
-
+                    .slides{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        margin-left: 9vw; 
+                        li {
+                            width: 14vw;
+                            height: 14vw;
+                            float: left;
+                            margin-right: 2.6vw;
+                        }
+                    }
+                    .slides.animated {
+                        transition: 0.5s ease-out;
+                    }
+                    
                     .card-img {
                         width: 14vw;
                         margin-left: 50px;

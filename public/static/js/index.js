@@ -94,8 +94,8 @@ document.addEventListener('scroll', () => {
         phoneImg.style.transform = 'translate(0, 0)';
     }else{
         if (window.scrollY == 0) {
-            desc.style.transform = 'translate(0, 500px)';
-            phoneImg.style.transform = 'translate(0, 500px)';
+            desc.style.transform = 'translate(0, 60%)';
+            phoneImg.style.transform = 'translate(0, 60%)';
     
         }
     }
@@ -132,3 +132,77 @@ sliderWrap.addEventListener("mousemove", e => {
   
     sliderWrap.style.left = `-${500}px`
 })
+
+//section8
+const slides = document.querySelector(".slides");
+const slide = document.querySelectorAll(".slides li");
+console.log(slides);
+let currentIdx = 0;
+let slideCount = slide.length;
+let section8slideWidth = slide[0].offsetWidth;
+let slideMargin = +window.getComputedStyle(slide[0]).getPropertyValue("margin-right").split("px")[0];
+makeClone();
+
+setInterval(() => {
+    moveSlider(currentIdx + 1);
+}, 2500)
+function makeClone() {
+    for (let i = 0; i < slideCount; i++) {
+        //a.cloneNode a 요소를 복사 a.cloneNode(true) a의 자식요소 모두복사
+        let cloneSlider = slide[i].cloneNode(true);
+        //클레스명 추가
+        cloneSlider.classList.add('clone');
+        //a.appendChild(b) a요소 뒤에 b추가
+        slides.appendChild(cloneSlider);
+
+    }
+    for (let i = slideCount - 1; i >= 0; i--) {
+        let cloneSlider = slide[i].cloneNode(true);
+        //클레스명 추가
+        cloneSlider.classList.add('clone');
+        //a.prepend(b) a요소 앞에 b추가
+        slides.prepend(cloneSlider);
+
+    }
+    updateWidth();
+
+    setInitialPos();
+    setTimeout(() => {
+        slides.classList.add('animated');
+    }, 100)
+
+
+}
+
+function updateWidth() {
+    const currentSlider = document.querySelectorAll(".slides li");
+    const newSlideCount = currentSlider.length;
+    //총 slider 넓이
+
+    const newWidth = (section8slideWidth + slideMargin) * newSlideCount - slideMargin + 3 + 'px';
+    slides.style.width = newWidth;
+
+}
+
+function setInitialPos() {
+    const initailTranslateValue = -(section8slideWidth + slideMargin) * slideCount + 3;
+
+    slides.style.transform = `translateX(${initailTranslateValue}px)`
+
+}
+
+function moveSlider(num) {
+    slides.style.left = -num * (section8slideWidth + slideMargin) + 'px';
+    currentIdx = num;
+
+    if (currentIdx == slideCount || currentIdx == -slideCount) {
+        setTimeout(() => {
+            slides.style.left = '0px';
+            currentIdx = 0;
+            slides.classList.remove('animated');
+        }, 500);
+        setTimeout(() => {
+            slides.classList.add('animated');
+        }, 600);
+    }
+}
