@@ -144,7 +144,7 @@ let slideMargin = +window.getComputedStyle(slide[0]).getPropertyValue("margin-ri
 makeClone();
 
 setInterval(() => {
-    moveSlider(currentIdx + 1);
+     moveSlider(currentIdx + 1);
 }, 2500)
 function makeClone() {
     for (let i = 0; i < slideCount; i++) {
