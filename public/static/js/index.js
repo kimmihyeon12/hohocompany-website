@@ -12,10 +12,22 @@ const rightButton = document.querySelector(".main-section1-wrap .right ");
 const loadingBar = document.querySelector(".main-section1-wrap .bar");
 const leftNumber = document.querySelector(".main-section1-wrap .left-number");
 const rightNumber = document.querySelector(".main-section1-wrap .right-number");
+const play = document.querySelector(".main-section1-wrap .play");
 let count = 0;
 let boxWid = 10;
-
-
+let playBtn = true;
+play.addEventListener("click",()=>{
+    console.log("clock");
+    if(playBtn){
+        play.src = "img/main-section1/stop.png";
+      
+      
+    }else{
+        play.src = "img/main-section1/play.png";
+    }
+    playBtn = !playBtn
+  
+})
 setInterval(() => {
     boxWid += 2;
     loadingBar.style.width = `${boxWid}px`
@@ -106,41 +118,19 @@ document.addEventListener('scroll', () => {
     }
 });
 
-//section5
-const sliderWrap = document.querySelector(".slider-wrap");
-let pressed = false;
-let startx;
-let x;
-
- 
-sliderWrap.addEventListener("mousedown", e => {
-    pressed = true
-    startx = e.offsetX;
-    console.log("mousedown");
-    sliderWrap.style.cursor = "grabbing"
-})
-
-sliderWrap.addEventListener("mouseup", () => {
-    console.log("mouseup");
-    sliderWrap.style.cursor = "grab"
-})
-sliderWrap.addEventListener("mousemove", e => {
-    console.log("mousemove");
-    if (!pressed) return
-    e.preventDefault()
-    x = e.offsetX
-  
-    sliderWrap.style.left = `-${500}px`
-})
 
 //section8
-const slides = document.querySelector(".slides");
-const slide = document.querySelectorAll(".slides li");
+const slides = document.querySelector(".main-section8-wrap .slides");
+const slide = document.querySelectorAll(".main-section8-wrap .slides li");
 console.log(slides);
 let currentIdx = 0;
 let slideCount = slide.length;
 let section8slideWidth = slide[0].offsetWidth;
 let slideMargin = +window.getComputedStyle(slide[0]).getPropertyValue("margin-right").split("px")[0];
+window.addEventListener("resize",()=>{
+    section8slideWidth = slide[0].offsetWidth;
+    slideMargin = +window.getComputedStyle(slide[0]).getPropertyValue("margin-right").split("px")[0];
+})
 makeClone();
 
 setInterval(() => {

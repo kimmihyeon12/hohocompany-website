@@ -448,13 +448,46 @@ body {
           width: 46.5vw; }
     body .wrapper .content .main-section5-wrap {
       width: 100vw;
-      border: 1px solid black;
-      height: 49vw; }
-      body .wrapper .content .main-section5-wrap .slider-wrap {
+      height: 49vw;
+      padding-top: 5.3vw; }
+      body .wrapper .content .main-section5-wrap .slide_wrapper {
         display: flex;
-        margin-left: -150px; }
-        body .wrapper .content .main-section5-wrap .slider-wrap img {
-          width: 330px; }
+        position: relative;
+        width: 100vw;
+        margin: 0 auto;
+        height: 36.8vw;
+        overflow: hidden; }
+        body .wrapper .content .main-section5-wrap .slide_wrapper .slides {
+          position: absolute;
+          left: 0;
+          top: 1vw;
+          margin-left: 6.5vw;
+          pointer-events: none; }
+          body .wrapper .content .main-section5-wrap .slide_wrapper .slides li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 17.3vw;
+            height: 34.8vw;
+            float: left; }
+            body .wrapper .content .main-section5-wrap .slide_wrapper .slides li img {
+              width: 13.6vw;
+              height: 27.4vw;
+              box-shadow: 0px 0px 1.1vw #c7c7c7;
+              border-radius: 1.8vw; }
+        body .wrapper .content .main-section5-wrap .slide_wrapper .animated {
+          transition: 0.6s ease-out; }
+      body .wrapper .content .main-section5-wrap .btn-wrap {
+        padding-top: 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        body .wrapper .content .main-section5-wrap .btn-wrap p {
+          font-family: "NeoB";
+          font-size: 1.4vw;
+          margin-bottom: 0.3vw; }
+        body .wrapper .content .main-section5-wrap .btn-wrap img {
+          width: 4.8vw; }
     body .wrapper .content .main-section6-wrap {
       width: 100vw;
       height: 49vw;
