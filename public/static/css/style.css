@@ -187,8 +187,7 @@ body {
       justify-content: space-between;
       width: 80%;
       align-items: center;
-      z-index: 10;
-      position: fixed; }
+      z-index: 10; }
       body .wrapper .header .inner-header img {
         width: 193px;
         height: 45px; }
@@ -234,6 +233,8 @@ body {
         margin-left: 14px;
         width: 0.8vw;
         margin-right: 1vw; }
+      body .wrapper .content .main-section1-wrap .slider-button .play {
+        width: 0.8vw; }
     body .wrapper .content .main-section1-wrap .mouse {
       position: absolute;
       top: 45vw;
@@ -241,6 +242,8 @@ body {
       animation-name: bounce;
       animation-duration: 2s;
       animation-iteration-count: infinite; }
+      body .wrapper .content .main-section1-wrap .mouse img {
+        width: 1.4vw; }
     body .wrapper .content .main-section1-wrap .banner-wrap {
       display: flex; }
       body .wrapper .content .main-section1-wrap .banner-wrap img {

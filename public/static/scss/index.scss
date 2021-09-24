@@ -13,7 +13,7 @@
             width: 80%;
             align-items: center;
             z-index: 10;
-            position: fixed;
+         //   position: fixed;
 
             img {
                 width: 193px;
@@ -87,15 +87,23 @@
                     width: 0.8vw;
                     margin-right: 1vw;
                 }
+                .play{
+                    width: 0.8vw;
+                }
             }
 
             .mouse {
                 position: absolute;
                 top: 45vw;
                 left: 49vw;
+           
+            
                 animation-name: bounce;
                 animation-duration: 2s;
                 animation-iteration-count: infinite;
+                img{
+                    width: 1.4vw;
+                }
             }
 
             .banner-wrap {
