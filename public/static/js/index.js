@@ -16,19 +16,15 @@ const play = document.querySelector(".main-section1-wrap .play");
 let count = 0;
 let boxWid = 10;
 let playBtn = true;
-play.addEventListener("click",()=>{
-    console.log("clock");
-    if(playBtn){
-        play.src = "img/main-section1/stop.png";
+ play.addEventListener("click",()=>{
+     console.log("clock");
+     if(playBtn){
+         play.src = "img/main-section1/stop.png";
+      clearInterval(sliderLoading);
       
-      
-    }else{
-        play.src = "img/main-section1/play.png";
-    }
-    playBtn = !playBtn
-  
-})
-setInterval(() => {
+     }else{
+         play.src = "img/main-section1/play.png";
+         sliderLoading=setInterval(() => {
     boxWid += 2;
     loadingBar.style.width = `${boxWid}px`
     if (boxWid > 83) {
@@ -47,7 +43,33 @@ setInterval(() => {
         else{
             rightNumber.innerHTML = `0${count+2}`;
         }
-      
+
+    }
+}, 150);
+     }
+     playBtn = !playBtn
+  
+ })
+var sliderLoading = setInterval(() => {
+    boxWid += 2;
+    loadingBar.style.width = `${boxWid}px`
+    if (boxWid > 83) {
+        boxWid = 0;
+        count++;
+        if (count >= bannerLength) count = 0;
+        for (let i = 0; i < bannerLength; i++) {
+            if (count == i)
+                bannerSlider1[i].style.display = 'block';
+            else bannerSlider1[i].style.display = 'none';
+        }
+        leftNumber.innerHTML = `0${count+1}`;
+        if(count+1>=bannerLength){
+            rightNumber.innerHTML = `01`;
+        }
+        else{
+            rightNumber.innerHTML = `0${count+2}`;
+        }
+
     }
 }, 150);
 
