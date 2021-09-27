@@ -178,7 +178,7 @@ img {
 body {
   overflow-x: hidden; }
   body .wrapper .header {
-    margin-top: 55px;
+    margin-top: 2.8vw;
     display: flex;
     justify-content: center; }
     body .wrapper .header .inner-header {
@@ -189,14 +189,13 @@ body {
       align-items: center;
       z-index: 10; }
       body .wrapper .header .inner-header img {
-        width: 193px;
-        height: 45px; }
+        width: 10vw; }
       body .wrapper .header .inner-header ul {
         right: 0;
         display: flex; }
         body .wrapper .header .inner-header ul li {
-          margin-left: 19px;
-          font-size: 24px;
+          margin-left: 0.9vw;
+          font-size: 1.25vw;
           font-family: "NeoB"; }
         body .wrapper .header .inner-header ul .bold {
           font-family: "NeoH"; }
@@ -215,7 +214,7 @@ body {
       font-size: 1.2vw; }
       body .wrapper .content .main-section1-wrap .slider-button .left {
         width: 0.8vw;
-        margin-right: 14px; }
+        margin-right: 0.7vw; }
       body .wrapper .content .main-section1-wrap .slider-button .bar-wrap {
         position: relative;
         margin: 0px 9px;
@@ -245,7 +244,10 @@ body {
       body .wrapper .content .main-section1-wrap .mouse img {
         width: 1.4vw; }
     body .wrapper .content .main-section1-wrap .banner-wrap {
-      display: flex; }
+      display: flex;
+      z-index: 10;
+      width: 100vw;
+      overflow: hidden; }
       body .wrapper .content .main-section1-wrap .banner-wrap img {
         width: 100vw; }
       body .wrapper .content .main-section1-wrap .banner-wrap .slider-img1 {
@@ -253,7 +255,7 @@ body {
         body .wrapper .content .main-section1-wrap .banner-wrap .slider-img1 .text-wrap {
           width: 50vw;
           position: relative;
-          letter-spacing: -3px;
+          letter-spacing: -0.1vw;
           line-height: 3.6vw;
           position: absolute;
           top: 17.2vw;
@@ -314,7 +316,8 @@ body {
             font-family: "NeoSB"; }
           body .wrapper .content .main-section1-wrap .banner-wrap .slider-img4 .text-wrap .big-font {
             font-size: 3.1vw;
-            font-family: "NeoSB"; }
+            font-family: "NeoSB";
+            margin-bottom: 0.8vw; }
             body .wrapper .content .main-section1-wrap .banner-wrap .slider-img4 .text-wrap .big-font em {
               color: #d9427a;
               font-family: "NeoH"; }
@@ -331,32 +334,34 @@ body {
         display: flex;
         width: 80%;
         justify-content: space-between;
-        margin-top: 33px; }
+        margin-top: 1.7vw; }
         body .wrapper .content .main-section2-wrap .main-section2-inner .desc {
           margin-top: 18vw;
-          transition: 1.2s; }
+          transition: 2s; }
           body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__title {
             display: flex;
             align-items: center;
             font-family: "NeoB";
             font-size: 1.4vw;
-            margin-bottom: 10px; }
+            margin-bottom: 0.5vw; }
             body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__title img {
-              margin-right: 19px;
-              width: 36px;
-              height: 36px; }
+              margin-right: 0.9vw;
+              width: 1.8vw;
+              height: 1.8vw; }
           body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__content1 {
-            margin-left: 50px;
+            margin-left: 2.6vw;
             font-family: "NeoB";
             font-size: 2.6vw;
-            letter-spacing: -2.5px;
-            margin-bottom: 10px; }
+            letter-spacing: -0.1vw;
+            margin-bottom: 0.5vw;
+            line-height: 2.9vw; }
             body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__content1 em {
               color: #f93873; }
           body .wrapper .content .main-section2-wrap .main-section2-inner .desc .desc__content2 {
-            margin-left: 50px;
+            margin-left: 2.6vw;
             font-family: "NeoSB";
-            font-size: 1.4vw; }
+            font-size: 1.4vw;
+            line-height: 1.9vw; }
         body .wrapper .content .main-section2-wrap .main-section2-inner .phone-img {
           transition: 0.5s;
           width: 41vw;
@@ -441,13 +446,13 @@ body {
           align-items: center; }
           body .wrapper .content .main-section4-wrap .main-section4-inner .desc .desc__title {
             font-size: 2.6vw;
-            font-family: "NeoB";
-            letter-spacing: -2.5px;
-            margin-bottom: 15px; }
+            font-family: "NeoEB";
+            letter-spacing: -0.1vw;
+            margin-bottom: 0.7vw; }
           body .wrapper .content .main-section4-wrap .main-section4-inner .desc .desc__content {
             font-size: 1.4vw;
             font-family: "NeoB";
-            margin-bottom: 46px; }
+            margin-bottom: 2.3vw; }
         body .wrapper .content .main-section4-wrap .main-section4-inner .icon-group {
           width: 46.5vw; }
     body .wrapper .content .main-section5-wrap {
@@ -503,23 +508,25 @@ body {
           display: flex;
           margin-top: 14.6vw; }
           body .wrapper .content .main-section6-wrap .main-section6-inner .desc > img {
-            width: 36px;
-            height: 36px;
-            margin-top: 14px;
-            margin-right: 28.9px; }
+            width: 1.8vw;
+            height: 1.8vw;
+            margin-top: 0.3vw;
+            margin-right: 1.5vw; }
           body .wrapper .content .main-section6-wrap .main-section6-inner .desc .desc__title {
             font-size: 2.6vw;
             font-family: "NeoB";
-            margin-bottom: 10px; }
+            margin-bottom: 0.5vw;
+            line-height: 2.9vw; }
           body .wrapper .content .main-section6-wrap .main-section6-inner .desc .desc__content {
             font-size: 1.4vw;
             font-family: "NeoSB";
-            margin-bottom: 20px; }
+            margin-bottom: 1vw;
+            line-height: 1.9vw; }
           body .wrapper .content .main-section6-wrap .main-section6-inner .desc .desc__content-img img {
             width: 24vw; }
         body .wrapper .content .main-section6-wrap .main-section6-inner .phone-img {
-          margin-top: 50px;
-          margin-left: 70px;
+          margin-top: 2.6vw;
+          margin-left: 3.6vw;
           width: 45vw;
           height: 47vw; }
     body .wrapper .content .main-section7-wrap {
@@ -539,26 +546,28 @@ body {
         display: flex; }
         body .wrapper .content .main-section7-wrap .desc .desc__title {
           font-size: 2.6vw;
-          letter-spacing: -2.5px;
+          letter-spacing: -0.1vw;
           font-family: "NeoR";
-          margin-right: 5vw; }
+          margin-right: 5vw;
+          line-height: 2.9vw; }
           body .wrapper .content .main-section7-wrap .desc .desc__title em {
             font-family: "NeoB"; }
         body .wrapper .content .main-section7-wrap .desc .desc__content {
           font-size: 1.4vw;
-          font-family: "NeoSB"; }
+          font-family: "NeoSB";
+          line-height: 1.9vw; }
     body .wrapper .content .main-section8-wrap {
       width: 100vw; }
       body .wrapper .content .main-section8-wrap .instagram .instagram__title {
         display: flex;
         align-items: center;
-        margin-bottom: 32px;
+        margin-bottom: 1.6vw;
         margin-top: 9.4vw; }
         body .wrapper .content .main-section8-wrap .instagram .instagram__title .b-in {
           font-size: 2.6vw;
           font-family: "NeoEB";
           margin-left: 11vw;
-          margin-right: 10px; }
+          margin-right: 0.5vw; }
         body .wrapper .content .main-section8-wrap .instagram .instagram__title .sm-tag {
           font-size: 1.4vw;
           font-family: "NeoSB"; }
@@ -583,13 +592,14 @@ body {
           transition: 0.5s ease-out; }
         body .wrapper .content .main-section8-wrap .instagram .instagram__slide_wrapper .card-img {
           width: 14vw;
-          margin-left: 50px; }
+          margin-left: 2.6vw; }
       body .wrapper .content .main-section8-wrap .news {
         margin-left: 11vw; }
         body .wrapper .content .main-section8-wrap .news > p {
           font-size: 2.6vw;
           font-family: "NeoR";
-          letter-spacing: -2.5px; }
+          letter-spacing: -0.1vw;
+          line-height: 2.9vw; }
           body .wrapper .content .main-section8-wrap .news > p em {
             font-family: "NeoEB"; }
         body .wrapper .content .main-section8-wrap .news .news-inner {

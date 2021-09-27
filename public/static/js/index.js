@@ -1,10 +1,11 @@
 console.log("index.js")
 let slideWidth = window.innerWidth;
-window.addEventListener("resize",()=>{
-    slideWidth=window.innerWidth;
+window.addEventListener("resize", () => {
+    slideWidth = window.innerWidth;
 })
 //section 1
 const bannerSlider1 = document.querySelectorAll(".main-section1-wrap .banner-wrap > div");
+const bannerSliderImgs = document.querySelectorAll(".main-section1-wrap .banner-wrap > div > img");
 const bannerSlider = document.querySelector(".main-section1-wrap .banner-wrap ");
 const bannerLength = document.querySelectorAll(".main-section1-wrap .banner-wrap > div").length;
 const leftButton = document.querySelector(".main-section1-wrap .left ");
@@ -16,40 +17,49 @@ const play = document.querySelector(".main-section1-wrap .play");
 let count = 0;
 let boxWid = 10;
 let playBtn = true;
- play.addEventListener("click",()=>{
-     console.log("clock");
-     if(playBtn){
-         play.src = "img/main-section1/stop.png";
-      clearInterval(sliderLoading);
-      
-     }else{
-         play.src = "img/main-section1/play.png";
-         sliderLoading=setInterval(() => {
-    boxWid += 2;
-    loadingBar.style.width = `${boxWid}px`
-    if (boxWid > 83) {
-        boxWid = 0;
-        count++;
-        if (count >= bannerLength) count = 0;
-        for (let i = 0; i < bannerLength; i++) {
-            if (count == i)
-                bannerSlider1[i].style.display = 'block';
-            else bannerSlider1[i].style.display = 'none';
-        }
-        leftNumber.innerHTML = `0${count+1}`;
-        if(count+1>=bannerLength){
-            rightNumber.innerHTML = `01`;
-        }
-        else{
-            rightNumber.innerHTML = `0${count+2}`;
-        }
+window.addEventListener('DOMContentLoaded', function () {
+    bannerSliderImgs[0].style.transition = '4.5s';
+    bannerSliderImgs[0].style.transform = 'scale(1.2)';
+});
 
+
+
+play.addEventListener("click", () => {
+    console.log("clock");
+    if (playBtn) {
+        play.src = "img/main-section1/stop.png";
+        clearInterval(sliderLoading);
+
+    } else {
+        play.src = "img/main-section1/play.png";
+        sliderLoading = setInterval(() => {
+            boxWid += 2;
+            loadingBar.style.width = `${boxWid}px`
+            if (boxWid > 83) {
+                boxWid = 0;
+                count++;
+                if (count >= bannerLength) count = 0;
+                for (let i = 0; i < bannerLength; i++) {
+                    if (count == i) {
+                        bannerSlider1[i].style.display = 'block';
+                        bannerSliderImgs[i].style.transition = '4.5s';
+                        bannerSliderImgs[i].style.transform = 'scale(1.2)';
+
+                    } else bannerSlider1[i].style.display = 'none';
+                }
+                leftNumber.innerHTML = `0${count+1}`;
+                if (count + 1 >= bannerLength) {
+                    rightNumber.innerHTML = `01`;
+                } else {
+                    rightNumber.innerHTML = `0${count+2}`;
+                }
+
+            }
+        }, 0);
     }
-}, 150);
-     }
-     playBtn = !playBtn
-  
- })
+    playBtn = !playBtn
+
+})
 var sliderLoading = setInterval(() => {
     boxWid += 2;
     loadingBar.style.width = `${boxWid}px`
@@ -58,15 +68,24 @@ var sliderLoading = setInterval(() => {
         count++;
         if (count >= bannerLength) count = 0;
         for (let i = 0; i < bannerLength; i++) {
-            if (count == i)
+            
+            console.log(i);
+            if (count === i) {
+                console.log(bannerSlider1[i]);
                 bannerSlider1[i].style.display = 'block';
-            else bannerSlider1[i].style.display = 'none';
+                bannerSliderImgs[i].style.transition = '4.5s';
+                bannerSliderImgs[i].style.transform = 'scale(1.2)';
+            } else {
+                console.log("ii")
+                bannerSlider1[i].style.display = 'none';
+                // bannerSliderImgs[i].style.transition = '0s';
+                bannerSliderImgs[i].style.transform = 'scale(1.0)';
+            }
         }
         leftNumber.innerHTML = `0${count+1}`;
-        if(count+1>=bannerLength){
+        if (count + 1 >= bannerLength) {
             rightNumber.innerHTML = `01`;
-        }
-        else{
+        } else {
             rightNumber.innerHTML = `0${count+2}`;
         }
 
@@ -79,15 +98,18 @@ rightButton.onclick = function () {
     count++;
     if (count >= bannerLength) count = 0;
     for (let i = 0; i < bannerLength; i++) {
-        if (count == i)
+        if (count == i) {
             bannerSlider1[i].style.display = 'block';
-        else bannerSlider1[i].style.display = 'none';
+            // bannerSlider1[i].style.transition = '1.5s';
+            // bannerSlider1[i].style.transform = 'scale(1.1)';
+            // // transition: all 0.5s linear;
+            // transform: scale(1.1);
+        } else bannerSlider1[i].style.display = 'none';
     }
     leftNumber.innerHTML = `0${count+1}`;
-    if(count+1>=bannerLength){
+    if (count + 1 >= bannerLength) {
         rightNumber.innerHTML = `01`;
-    }
-    else{
+    } else {
         rightNumber.innerHTML = `0${count+2}`;
     }
 }
@@ -95,22 +117,24 @@ leftButton.onclick = function () {
 
 
 
-    count--; 
+    count--;
     if (count <= -1) {
         count = 3;
     }
 
     for (let i = 0; i < bannerLength; i++) {
-        if (count == i)
+        if (count == i) {
             bannerSlider1[i].style.display = 'block';
-        else bannerSlider1[i].style.display = 'none';
+            // bannerSlider1[i].style.transition = '1.5s';
+            // bannerSlider1[i].style.transform = 'scale(1.1)';
+
+        } else bannerSlider1[i].style.display = 'none';
 
     }
     leftNumber.innerHTML = `0${count+1}`;
-    if(count+1>=bannerLength){
+    if (count + 1 >= bannerLength) {
         rightNumber.innerHTML = `01`;
-    }
-    else{
+    } else {
         rightNumber.innerHTML = `0${count+2}`;
     }
 }
@@ -122,19 +146,19 @@ const desc = document.querySelector(".main-section2-wrap .desc");
 const phoneImg = document.querySelector(".main-section2-wrap .phone-img");
 
 document.addEventListener('scroll', () => {
- 
-    if(slideWidth/8<150){
+
+    if (slideWidth / 8 < 150) {
         desc.style.transform = 'translate(0, 0)';
         phoneImg.style.transform = 'translate(0, 0)';
-    }else{
-        if (window.scrollY == 0) {
-            desc.style.transform = 'translate(0, 60%)';
-            phoneImg.style.transform = 'translate(0, 60%)';
-    
+    } else {
+        if (window.scrollY < 30) {
+            desc.style.transform = 'translate(0, 150%)';
+            phoneImg.style.transform = 'translate(0, 50%)';
+
         }
     }
-  
-    if (window.scrollY >= slideWidth/8) {
+
+    if (window.scrollY >= slideWidth / 8) {
         desc.style.transform = 'translate(0, 0)';
         phoneImg.style.transform = 'translate(0, 0)';
     }
@@ -149,15 +173,16 @@ let currentIdx = 0;
 let slideCount = slide.length;
 let section8slideWidth = slide[0].offsetWidth;
 let slideMargin = +window.getComputedStyle(slide[0]).getPropertyValue("margin-right").split("px")[0];
-window.addEventListener("resize",()=>{
+window.addEventListener("resize", () => {
     section8slideWidth = slide[0].offsetWidth;
     slideMargin = +window.getComputedStyle(slide[0]).getPropertyValue("margin-right").split("px")[0];
 })
 makeClone();
 
 setInterval(() => {
-     moveSlider(currentIdx + 1);
+    moveSlider(currentIdx + 1);
 }, 2500)
+
 function makeClone() {
     for (let i = 0; i < slideCount; i++) {
         //a.cloneNode a 요소를 복사 a.cloneNode(true) a의 자식요소 모두복사

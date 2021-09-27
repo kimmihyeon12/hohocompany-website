@@ -1,7 +1,7 @@
 .wrapper {
 
     .header {
-        margin-top: 55px;
+        margin-top: 2.8vw;
         display: flex;
         justify-content: center;
 
@@ -16,17 +16,17 @@
          //   position: fixed;
 
             img {
-                width: 193px;
-                height: 45px;
+                width: 10vw;
+             
             }
-
+          
             ul {
                 right: 0;
                 display: flex;
 
                 li {
-                    margin-left: 19px;
-                    font-size: 24px;
+                    margin-left: 0.9vw;
+                    font-size: 1.25vw;
                     font-family: "NeoB";
 
                 }
@@ -59,7 +59,7 @@
                 .left {
                     width: 0.8vw;
 
-                    margin-right: 14px;
+                    margin-right: 0.7vw;
                 }
 
 
@@ -108,12 +108,20 @@
 
             .banner-wrap {
                 display: flex;
-
-
+              
+                z-index: 10;
+             
+                width: 100vw;
+                overflow: hidden;
                 img {
-                    width: 100vw;
+                  width: 100vw;
+                 
+                 
                 }
-
+            //     img:hover{
+                 
+            //    }
+   
 
                 .slider-img1 {
                     position: relative;
@@ -121,7 +129,7 @@
                     .text-wrap {
                         width: 50vw;
                         position: relative;
-                        letter-spacing: -3px;
+                        letter-spacing: -0.1vw;
                         line-height: 3.6vw;
                         position: absolute;
                         top: 17.2vw;
@@ -148,7 +156,9 @@
                             top: 4.9vw;
                             width: 11.6vw;
                         }
+                       
                     }
+                  
 
                 }
 
@@ -217,13 +227,14 @@
                         p {
                             font-size: 3.1vw;
                             font-family: "NeoSB";
+                         
 
                         }
 
                         .big-font {
                             font-size: 3.1vw;
                             font-family: "NeoSB";
-
+                            margin-bottom: 0.8vw;
                             em {
                                 color: #d9427a;
                                 font-family: "NeoH";
@@ -262,11 +273,11 @@
                 display: flex;
                 width: 80%;
                 justify-content: space-between;
-                margin-top: 33px;
+                margin-top: 1.7vw;
 
                 .desc {
                     margin-top: 18vw;
-                    transition: 1.2s;
+                    transition: 2s;
 
 
                     .desc__title {
@@ -274,22 +285,22 @@
                         align-items: center;
                         font-family: "NeoB";
                         font-size: 1.4vw;
-                        margin-bottom: 10px;
+                        margin-bottom: 0.5vw;
 
                         img {
-                            margin-right: 19px;
-                            width: 36px;
-                            height: 36px;
+                            margin-right: 0.9vw;
+                            width: 1.8vw;
+                            height: 1.8vw;
                         }
                     }
 
                     .desc__content1 {
-                        margin-left: 50px;
+                        margin-left: 2.6vw;
                         font-family: "NeoB";
                         font-size: 2.6vw;
-                        letter-spacing: -2.5px;
-                        margin-bottom: 10px;
-
+                        letter-spacing: -0.1vw;
+                        margin-bottom: 0.5vw;
+                        line-height: 2.9vw;
                         em {
                             color: #f93873;
                         }
@@ -297,10 +308,10 @@
                     }
 
                     .desc__content2 {
-                        margin-left: 50px;
+                        margin-left: 2.6vw;
                         font-family: "NeoSB";
                         font-size: 1.4vw;
-
+                        line-height: 1.9vw;
                     }
 
 
@@ -424,15 +435,15 @@
 
                     .desc__title {
                         font-size: 2.6vw;
-                        font-family: "NeoB";
-                        letter-spacing: -2.5px;
-                        margin-bottom: 15px;
+                        font-family: "NeoEB";
+                        letter-spacing: -0.1vw;
+                        margin-bottom: 0.7vw;
                     }
 
                     .desc__content {
                         font-size: 1.4vw;
                         font-family: "NeoB";
-                        margin-bottom: 46px;
+                        margin-bottom: 2.3vw;
                     }
                 }
 
@@ -523,22 +534,25 @@
                     margin-top: 14.6vw;
 
                     >img {
-                        width: 36px;
-                        height: 36px;
-                        margin-top: 14px;
-                        margin-right: 28.9px;
+                        width: 1.8vw;
+                        height: 1.8vw;
+                        margin-top: 0.3vw;
+                        margin-right: 1.5vw;
                     }
 
                     .desc__title {
                         font-size: 2.6vw;
                         font-family: "NeoB";
-                        margin-bottom: 10px;
+                        margin-bottom: 0.5vw;
+                        line-height: 2.9vw;
                     }
 
                     .desc__content {
                         font-size: 1.4vw;
                         font-family: "NeoSB";
-                        margin-bottom: 20px;
+                        margin-bottom: 1vw;
+                        line-height: 1.9vw;
+                        
 
                     }
 
@@ -553,8 +567,8 @@
                 }
 
                 .phone-img {
-                    margin-top: 50px;
-                    margin-left: 70px;
+                    margin-top: 2.6vw;
+                    margin-left: 3.6vw;
                     width: 45vw;
                     height: 47vw;
                 }
@@ -586,9 +600,10 @@
 
                 .desc__title {
                     font-size: 2.6vw;
-                    letter-spacing: -2.5px;
+                    letter-spacing: -0.1vw;
                     font-family: "NeoR";
                     margin-right: 5vw;
+                    line-height: 2.9vw;
 
                     em {
                         font-family: "NeoB";
@@ -598,7 +613,8 @@
 
                 .desc__content {
                     font-size: 1.4vw;
-                    font-family: "NeoSB"
+                    font-family: "NeoSB";
+                    line-height: 1.9vw;
                 }
             }
         }
@@ -612,14 +628,14 @@
                 .instagram__title {
                     display: flex;
                     align-items: center;
-                    margin-bottom: 32px;
+                    margin-bottom: 1.6vw;
                     margin-top: 9.4vw;
 
                     .b-in {
                         font-size: 2.6vw;
                         font-family: "NeoEB";
                         margin-left: 11vw;
-                        margin-right: 10px;
+                        margin-right: 0.5vw;
                     }
 
                     .sm-tag {
@@ -657,7 +673,7 @@
 
                     .card-img {
                         width: 14vw;
-                        margin-left: 50px;
+                        margin-left: 2.6vw;
 
                     }
                 }
@@ -671,8 +687,8 @@
 
                     font-size: 2.6vw;
                     font-family: "NeoR";
-                    letter-spacing: -2.5px;
-
+                    letter-spacing: -0.1vw;
+                    line-height: 2.9vw;
                     em {
                         font-family: "NeoEB";
                     }
@@ -691,6 +707,7 @@
                         align-items: center;
 
                         .card-img {
+                        
                             overflow: hidden;
                             width: 20.4vw;
                             border-radius: 1.6vw;
