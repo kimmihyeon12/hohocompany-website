@@ -27,7 +27,6 @@ embed,
 fieldset,
 figcaption,
 figure,
-footer,
 form,
 h1,
 h2,
@@ -92,7 +91,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 main,
@@ -201,7 +199,8 @@ body {
           font-family: "NeoH"; }
   body .wrapper .content {
     position: absolute;
-    top: 0; }
+    top: 0;
+    border: 1px solid black; }
     body .wrapper .content .main-section1-wrap .slider-button {
       top: 43vw;
       left: 12vw;
@@ -218,7 +217,7 @@ body {
       body .wrapper .content .main-section1-wrap .slider-button .bar-wrap {
         position: relative;
         margin: 0px 9px;
-        width: 83px;
+        width: 8vw;
         height: 7px;
         border-radius: 30px;
         background-color: rgba(0, 0, 0, 0.2); }
@@ -245,11 +244,12 @@ body {
         width: 1.4vw; }
     body .wrapper .content .main-section1-wrap .banner-wrap {
       display: flex;
-      z-index: 10;
-      width: 100vw;
-      overflow: hidden; }
-      body .wrapper .content .main-section1-wrap .banner-wrap img {
-        width: 100vw; }
+      width: 400vw; }
+      body .wrapper .content .main-section1-wrap .banner-wrap li {
+        width: 100vw;
+        overflow: hidden; }
+        body .wrapper .content .main-section1-wrap .banner-wrap li img {
+          width: 100vw; }
       body .wrapper .content .main-section1-wrap .banner-wrap .slider-img1 {
         position: relative; }
         body .wrapper .content .main-section1-wrap .banner-wrap .slider-img1 .text-wrap {
@@ -363,7 +363,7 @@ body {
             font-size: 1.4vw;
             line-height: 1.9vw; }
         body .wrapper .content .main-section2-wrap .main-section2-inner .phone-img {
-          transition: 0.5s;
+          transition: 0.2s;
           width: 41vw;
           height: 43.1vw; }
     body .wrapper .content .main-section3-wrap {
@@ -506,7 +506,8 @@ body {
         display: flex; }
         body .wrapper .content .main-section6-wrap .main-section6-inner .desc {
           display: flex;
-          margin-top: 14.6vw; }
+          margin-top: 14.6vw;
+          transition: 2.5s; }
           body .wrapper .content .main-section6-wrap .main-section6-inner .desc > img {
             width: 1.8vw;
             height: 1.8vw;
@@ -528,7 +529,8 @@ body {
           margin-top: 2.6vw;
           margin-left: 3.6vw;
           width: 45vw;
-          height: 47vw; }
+          height: 47vw;
+          transition: 1s; }
     body .wrapper .content .main-section7-wrap {
       width: 100vw;
       height: 49vw;
@@ -629,7 +631,7 @@ body {
               font-family: "NeoB"; }
             body .wrapper .content .main-section8-wrap .news .news-inner li .news1__date {
               padding: 1.1vw 1.9vw;
-              font-size: 1vw;
+              font-size: 1.1vw;
               font-family: "NeoM";
               color: #7d7d7d; }
         body .wrapper .content .main-section8-wrap .news .news-btn-wrap {
@@ -655,19 +657,24 @@ body {
           body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li {
             margin-left: 2.3vw;
             margin-right: 2.3vw; }
+            body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc1-wrap:hover > img {
+              transition: all 1s linear;
+              transform: scale(1.1); }
             body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc1-wrap {
               position: relative;
               width: 34.8vw;
               height: 10.4vw;
               border-radius: 1.5vw;
-              overflow: hidden; }
+              overflow: hidden;
+              border-radius: 30px;
+              background-color: rgba(0, 0, 0, 0.28); }
               body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc1-wrap img {
                 position: absolute;
                 width: 34.8vw;
-                height: 10.4vw; }
-              body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc1-wrap > img:hover {
-                transition: all 0.5s linear;
-                transform: scale(1.2); }
+                height: 10.4vw;
+                z-index: -1; }
+              body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc1-wrap .clickbtn {
+                z-index: 10; }
               body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc1-wrap .desc1 {
                 position: absolute;
                 display: flex;
@@ -683,22 +690,28 @@ body {
                   margin-left: 24vw;
                   margin-top: 6.14vw; }
                 body .wrapper .content .main-section8-wrap .company-info .company-info-wrap li .desc1-wrap .desc1 .desc__content {
+                  margin-top: 1.5vw;
                   margin-left: 1.45vw;
                   font-size: 1.2vw;
                   font-family: "NeoSB"; }
+          body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap:hover > img {
+            transition: all 1s linear;
+            transform: scale(1.1); }
           body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap {
             position: relative;
             width: 34.8vw;
             height: 10.4vw;
             border-radius: 1.5vw;
-            overflow: hidden; }
+            overflow: hidden;
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.28); }
             body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap img {
               position: absolute;
               width: 34.8vw;
-              height: 10.4vw; }
-            body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap > img:hover {
-              transition: all 0.5s linear;
-              transform: scale(1.2); }
+              height: 10.4vw;
+              z-index: -1; }
+            body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap .clickbtn {
+              z-index: 10; }
             body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap .desc2 {
               position: absolute;
               display: flex;
@@ -714,36 +727,46 @@ body {
                 margin-left: 26.6vw;
                 margin-top: 6.14vw; }
               body .wrapper .content .main-section8-wrap .company-info .company-info-wrap .desc2-wrap .desc2 .desc__content {
+                margin-top: 1.5vw;
                 margin-left: 1.45vw;
                 font-size: 1.2vw;
                 font-family: "NeoSB"; }
       body .wrapper .content .main-section8-wrap .store-download {
-        margin-left: 10.9vw; }
-        body .wrapper .content .main-section8-wrap .store-download .img-wrap {
-          position: relative; }
-          body .wrapper .content .main-section8-wrap .store-download .img-wrap img {
-            position: absolute;
-            width: 89vw; }
-          body .wrapper .content .main-section8-wrap .store-download .img-wrap .text-wrap {
-            margin-left: 28vw;
-            position: absolute;
-            color: white;
-            margin-top: 17.2vw; }
-            body .wrapper .content .main-section8-wrap .store-download .img-wrap .text-wrap p {
-              text-align: center;
-              font-size: 1.66vw;
-              font-family: "NeoB"; }
-              body .wrapper .content .main-section8-wrap .store-download .img-wrap .text-wrap p em {
-                font-size: 1.97vw;
-                font-family: "NeoEB"; }
-          body .wrapper .content .main-section8-wrap .store-download .img-wrap .download-wrap {
-            position: absolute;
-            top: 23.2vw; }
-            body .wrapper .content .main-section8-wrap .store-download .img-wrap .download-wrap .app {
-              width: 12.4vw;
-              margin-left: 26vw; }
-            body .wrapper .content .main-section8-wrap .store-download .img-wrap .download-wrap .google {
-              width: 12.4vw;
-              margin-left: 40.4vw; }
+        margin-left: 10vw;
+        margin-top: 6vw;
+        position: relative;
+        height: 30vw; }
+        body .wrapper .content .main-section8-wrap .store-download .img-wrap img {
+          position: absolute;
+          width: 82vw; }
+        body .wrapper .content .main-section8-wrap .store-download .img-wrap .text-wrap {
+          margin-left: 28vw;
+          position: absolute;
+          color: white;
+          margin-top: 11.2vw; }
+          body .wrapper .content .main-section8-wrap .store-download .img-wrap .text-wrap p {
+            text-align: center;
+            font-size: 1.66vw;
+            font-family: "NeoB"; }
+            body .wrapper .content .main-section8-wrap .store-download .img-wrap .text-wrap p em {
+              font-size: 1.97vw;
+              font-family: "NeoEB"; }
+        body .wrapper .content .main-section8-wrap .store-download .img-wrap .download-wrap {
+          position: absolute;
+          top: 18.2vw; }
+          body .wrapper .content .main-section8-wrap .store-download .img-wrap .download-wrap .app {
+            width: 12.4vw;
+            margin-left: 26vw; }
+          body .wrapper .content .main-section8-wrap .store-download .img-wrap .download-wrap .google {
+            width: 12.4vw;
+            margin-left: 40.4vw; }
+    body .wrapper .content footer {
+      width: 100vw;
+      height: 15vw;
+      background-color: #2b2b2b;
+      display: flex;
+      justify-content: center; }
+      body .wrapper .content footer .footer-wrap {
+        width: 80%; }
   body .pink-c {
     color: #f93873; }

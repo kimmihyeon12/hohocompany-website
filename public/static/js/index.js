@@ -4,165 +4,141 @@ window.addEventListener("resize", () => {
     slideWidth = window.innerWidth;
 })
 //section 1
-const bannerSlider1 = document.querySelectorAll(".main-section1-wrap .banner-wrap > div");
-const bannerSliderImgs = document.querySelectorAll(".main-section1-wrap .banner-wrap > div > img");
+const bannerSliderlist = document.querySelectorAll(".main-section1-wrap .banner-wrap  li");
 const bannerSlider = document.querySelector(".main-section1-wrap .banner-wrap ");
-const bannerLength = document.querySelectorAll(".main-section1-wrap .banner-wrap > div").length;
+
 const leftButton = document.querySelector(".main-section1-wrap .left ");
 const rightButton = document.querySelector(".main-section1-wrap .right ");
+const loadingWarp = document.querySelector(".main-section1-wrap .bar-wrap");
 const loadingBar = document.querySelector(".main-section1-wrap .bar");
 const leftNumber = document.querySelector(".main-section1-wrap .left-number");
 const rightNumber = document.querySelector(".main-section1-wrap .right-number");
 const play = document.querySelector(".main-section1-wrap .play");
 let count = 0;
 let boxWid = 10;
-let playBtn = true;
-window.addEventListener('DOMContentLoaded', function () {
-    bannerSliderImgs[0].style.transition = '4.5s';
-    bannerSliderImgs[0].style.transform = 'scale(1.2)';
-});
-
-
+let  playBtn= true;
 
 play.addEventListener("click", () => {
     console.log("clock");
     if (playBtn) {
         play.src = "img/main-section1/stop.png";
-        clearInterval(sliderLoading);
+        clearTimeout(barEffect);
 
     } else {
         play.src = "img/main-section1/play.png";
-        sliderLoading = setInterval(() => {
-            boxWid += 2;
-            loadingBar.style.width = `${boxWid}px`
-            if (boxWid > 83) {
-                boxWid = 0;
-                count++;
-                if (count >= bannerLength) count = 0;
-                for (let i = 0; i < bannerLength; i++) {
-                    if (count == i) {
-                        bannerSlider1[i].style.display = 'block';
-                        bannerSliderImgs[i].style.transition = '4.5s';
-                        bannerSliderImgs[i].style.transform = 'scale(1.2)';
-
-                    } else bannerSlider1[i].style.display = 'none';
-                }
-                leftNumber.innerHTML = `0${count+1}`;
-                if (count + 1 >= bannerLength) {
-                    rightNumber.innerHTML = `01`;
-                } else {
-                    rightNumber.innerHTML = `0${count+2}`;
-                }
-
-            }
-        }, 0);
+        count --;
+        showslider(false);
+        
     }
     playBtn = !playBtn
-
 })
-var sliderLoading = setInterval(() => {
-    boxWid += 2;
-    loadingBar.style.width = `${boxWid}px`
-    if (boxWid > 83) {
-        boxWid = 0;
-        count++;
-        if (count >= bannerLength) count = 0;
-        for (let i = 0; i < bannerLength; i++) {
-            
-            console.log(i);
-            if (count === i) {
-                console.log(bannerSlider1[i]);
-                bannerSlider1[i].style.display = 'block';
-                bannerSliderImgs[i].style.transition = '4.5s';
-                bannerSliderImgs[i].style.transform = 'scale(1.2)';
-            } else {
-                console.log("ii")
-                bannerSlider1[i].style.display = 'none';
-                // bannerSliderImgs[i].style.transition = '0s';
-                bannerSliderImgs[i].style.transform = 'scale(1.0)';
-            }
-        }
-        leftNumber.innerHTML = `0${count+1}`;
-        if (count + 1 >= bannerLength) {
-            rightNumber.innerHTML = `01`;
-        } else {
-            rightNumber.innerHTML = `0${count+2}`;
-        }
+window.addEventListener('load', () => {
+    showslider(true);
+  
+});
 
+
+
+var barEffect;
+
+function showslider(stop) {
+
+    if (count < 0) count = 3
+    if (count >= bannerSliderlist.length) {
+        count = 0;
+        bannerSliderlist[bannerSliderlist.length - 1].querySelector("img").style.transform = 'none';
+        bannerSliderlist[bannerSliderlist.length - 1].querySelector("img").style.transition = 'none';
     }
-}, 150);
+
+    bannerSliderlist[count].querySelector("img").style.transform = 'scale(1.1)';
+    bannerSliderlist[count].querySelector("img").style.transition = '4.5s';
+    bannerSlider.style.marginLeft = `-${count*25}%`;
+    if (count == 3) {
+        for (let i = 0; i < 3; i++) {
+            bannerSliderlist[i].querySelector("img").style.transform = 'none';
+            bannerSliderlist[i].querySelector("img").style.transition = 'none';
+        }
+    }
+    leftNumber.innerHTML = `0${count+1}`;
+    if (count + 1 >= bannerSliderlist.length) {
+        rightNumber.innerHTML = `01`;
+    } else {
+        rightNumber.innerHTML = `0${count+2}`;
+    }
+
+    count++;
+
+ 
+        
+    if(stop)
+    boxWid=10;
+    barEffect = setInterval(() => {sliderLoadingBar()},100);
 
 
+}
+
+function sliderLoadingBar(){
+    boxWid += loadingWarp.clientWidth/43;
+    loadingBar.style.width = `${boxWid}px`
+    if(boxWid>loadingWarp.clientWidth){
+        clearTimeout(barEffect);
+        showslider(true);
+    }
+}
 
 rightButton.onclick = function () {
-    count++;
-    if (count >= bannerLength) count = 0;
-    for (let i = 0; i < bannerLength; i++) {
-        if (count == i) {
-            bannerSlider1[i].style.display = 'block';
-            // bannerSlider1[i].style.transition = '1.5s';
-            // bannerSlider1[i].style.transform = 'scale(1.1)';
-            // // transition: all 0.5s linear;
-            // transform: scale(1.1);
-        } else bannerSlider1[i].style.display = 'none';
+    if(playBtn){
+    clearTimeout(barEffect);
+    showslider(true)
     }
-    leftNumber.innerHTML = `0${count+1}`;
-    if (count + 1 >= bannerLength) {
-        rightNumber.innerHTML = `01`;
-    } else {
-        rightNumber.innerHTML = `0${count+2}`;
-    }
+    
+
 }
 leftButton.onclick = function () {
-
-
-
-    count--;
-    if (count <= -1) {
-        count = 3;
+    if(playBtn){
+    count = count - 2;
+    clearTimeout(barEffect);
+    showslider(true);
     }
-
-    for (let i = 0; i < bannerLength; i++) {
-        if (count == i) {
-            bannerSlider1[i].style.display = 'block';
-            // bannerSlider1[i].style.transition = '1.5s';
-            // bannerSlider1[i].style.transform = 'scale(1.1)';
-
-        } else bannerSlider1[i].style.display = 'none';
-
-    }
-    leftNumber.innerHTML = `0${count+1}`;
-    if (count + 1 >= bannerLength) {
-        rightNumber.innerHTML = `01`;
-    } else {
-        rightNumber.innerHTML = `0${count+2}`;
-    }
+ 
 }
 
 
-
-//section 2
-const desc = document.querySelector(".main-section2-wrap .desc");
-const phoneImg = document.querySelector(".main-section2-wrap .phone-img");
+//section2
+const desc2 = document.querySelector(".main-section2-wrap .desc");
+const phoneImg2 = document.querySelector(".main-section2-wrap .phone-img");
+const desc6 = document.querySelector(".main-section6-wrap .desc");
+const phoneImg6 = document.querySelector(".main-section6-wrap .phone-img");
 
 document.addEventListener('scroll', () => {
 
+
     if (slideWidth / 8 < 150) {
-        desc.style.transform = 'translate(0, 0)';
-        phoneImg.style.transform = 'translate(0, 0)';
+        desc2.style.transform = 'translate(0, 0)';
+        phoneImg2.style.transform = 'translate(0, 0)';
     } else {
         if (window.scrollY < 30) {
-            desc.style.transform = 'translate(0, 150%)';
-            phoneImg.style.transform = 'translate(0, 50%)';
+            desc2.style.transform = 'translate(0, 150%)';
+            phoneImg2.style.transform = 'translate(0, 50%)';
+            desc6.style.transform = 'translate(0, 150%)';
+            phoneImg6.style.transform = 'translate(0, 150%)';
 
         }
     }
 
-    if (window.scrollY >= slideWidth / 8) {
-        desc.style.transform = 'translate(0, 0)';
-        phoneImg.style.transform = 'translate(0, 0)';
+    if (window.scrollY >= slideWidth / 7) {
+        desc2.style.transform = 'translate(0, 0)';
+        phoneImg2.style.transform = 'translate(0, 0)';
     }
+    if (window.scrollY >= slideWidth * 1.8) {
+        desc6.style.transform = 'translate(0, 0)';
+        phoneImg6.style.transform = 'translate(0, 0)';
+    }
+
 });
+
+
+
 
 
 //section8
@@ -180,8 +156,8 @@ window.addEventListener("resize", () => {
 makeClone();
 
 setInterval(() => {
-    moveSlider(currentIdx + 1);
-}, 2500)
+    moveSlider(currentIdx + 0.2);
+}, 200)
 
 function makeClone() {
     for (let i = 0; i < slideCount; i++) {
@@ -229,7 +205,7 @@ function setInitialPos() {
 }
 
 function moveSlider(num) {
-    slides.style.left = -num * (section8slideWidth + slideMargin) + 'px';
+    slides.style.left = (-num * (section8slideWidth + slideMargin)) / 5 + 'px';
     currentIdx = num;
 
     if (currentIdx == slideCount || currentIdx == -slideCount) {
