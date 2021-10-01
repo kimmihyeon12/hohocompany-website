@@ -4,14 +4,15 @@ window.addEventListener("DOMContentLoaded", () => {
     const slide = document.querySelectorAll(".main-section5-wrap .slides li");
     const prevBtn = document.querySelector(".main-section5-wrap .prev");
     const nextBtn = document.querySelector(".main-section5-wrap .next");
+    const currentSliderContent = document.querySelector(".main-section5-wrap .btn-wrap p")
     let currentSlider;
 
     let currentIdx = 0;
     let slideCount = slide.length;
     let slideWidth = slide[0].offsetWidth;
+    let sliderContent = ["매장 상세 정보" ,"편의시설 필터 설정하기","방문자 리뷰","인트로","카테고리 한 눈에 보기","즐겨찾기","목적지 정보"]
 
-    // let slideMargin = +window.getComputedStyle(slide[0]).getPropertyValue("margin-right").split("px")[0];
-    //  console.log(+window.getComputedStyle(slide[0]).getPropertyValue("margin-right").split("px")[0]);
+    
     let slideMargin = +window.getComputedStyle(slide[0]).getPropertyValue("margin-right").split("px")[0];
     window.addEventListener("resize",()=>{
         slideMargin = +window.getComputedStyle(slide[0]).getPropertyValue("margin-right").split("px")[0]
@@ -83,6 +84,9 @@ window.addEventListener("DOMContentLoaded", () => {
     function moveSlider(num) {
         slides.style.left = -num * (slideWidth + slideMargin) + 'px';
         currentIdx = num;
+        if(num>=4) num = num-7;
+        console.log(num)
+        currentSliderContent.innerHTML = `${sliderContent[num+3]}`
       
  
 

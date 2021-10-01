@@ -1,4 +1,3 @@
-console.log("index.js")
 let slideWidth = window.innerWidth;
 window.addEventListener("resize", () => {
     slideWidth = window.innerWidth;
@@ -6,18 +5,28 @@ window.addEventListener("resize", () => {
 //section 1
 const bannerSliderlist = document.querySelectorAll(".main-section1-wrap .banner-wrap  li");
 const bannerSlider = document.querySelector(".main-section1-wrap .banner-wrap ");
-
 const leftButton = document.querySelector(".main-section1-wrap .left ");
 const rightButton = document.querySelector(".main-section1-wrap .right ");
 const loadingWarp = document.querySelector(".main-section1-wrap .bar-wrap");
 const loadingBar = document.querySelector(".main-section1-wrap .bar");
 const leftNumber = document.querySelector(".main-section1-wrap .left-number");
 const rightNumber = document.querySelector(".main-section1-wrap .right-number");
+const popupWrap = document.querySelector(".popup-wrap");
 const play = document.querySelector(".main-section1-wrap .play");
+const body = document.querySelector("body");
 let count = 0;
 let boxWid = 10;
-let  playBtn= true;
+let playBtn = true;
 
+const togetherBtn = document.querySelector(".clickbtn1");
+const popup = document.querySelector(".popup-wrap");
+
+togetherBtn.addEventListener("click", () => {
+    popup.style.visibility = `visible`;
+    popupWrap.style.backgroundColor = `rgba(0, 0, 0, 0.6)`;
+    body.style.overflow = `hidden`;
+
+})
 play.addEventListener("click", () => {
     console.log("clock");
     if (playBtn) {
@@ -26,15 +35,15 @@ play.addEventListener("click", () => {
 
     } else {
         play.src = "img/main-section1/play.png";
-        count --;
+        count--;
         showslider(false);
-        
+
     }
     playBtn = !playBtn
 })
 window.addEventListener('load', () => {
     showslider(true);
-  
+
 });
 
 
@@ -52,7 +61,8 @@ function showslider(stop) {
 
     bannerSliderlist[count].querySelector("img").style.transform = 'scale(1.1)';
     bannerSliderlist[count].querySelector("img").style.transition = '4.5s';
-    bannerSlider.style.marginLeft = `-${count*25}%`;
+
+    bannerSlider.style.marginLeft = `-${count*100}%`;
     if (count == 3) {
         for (let i = 0; i < 3; i++) {
             bannerSliderlist[i].querySelector("img").style.transform = 'none';
@@ -68,43 +78,45 @@ function showslider(stop) {
 
     count++;
 
- 
-        
-    if(stop)
-    boxWid=10;
-    barEffect = setInterval(() => {sliderLoadingBar()},100);
+
+
+    if (stop)
+        boxWid = 10;
+    barEffect = setInterval(() => {
+        sliderLoadingBar()
+    }, 100);
 
 
 }
 
-function sliderLoadingBar(){
-    boxWid += loadingWarp.clientWidth/43;
+function sliderLoadingBar() {
+    boxWid += loadingWarp.clientWidth / 43;
     loadingBar.style.width = `${boxWid}px`
-    if(boxWid>loadingWarp.clientWidth){
+    if (boxWid > loadingWarp.clientWidth) {
         clearTimeout(barEffect);
         showslider(true);
     }
 }
 
 rightButton.onclick = function () {
-    if(playBtn){
-    clearTimeout(barEffect);
-    showslider(true)
+    if (playBtn) {
+        clearTimeout(barEffect);
+        showslider(true)
     }
-    
+
 
 }
 leftButton.onclick = function () {
-    if(playBtn){
-    count = count - 2;
-    clearTimeout(barEffect);
-    showslider(true);
+    if (playBtn) {
+        count = count - 2;
+        clearTimeout(barEffect);
+        showslider(true);
     }
- 
+
 }
 
 
-//section2
+// //section2
 const desc2 = document.querySelector(".main-section2-wrap .desc");
 const phoneImg2 = document.querySelector(".main-section2-wrap .phone-img");
 const desc6 = document.querySelector(".main-section6-wrap .desc");
@@ -141,7 +153,7 @@ document.addEventListener('scroll', () => {
 
 
 
-//section8
+// //section8
 const slides = document.querySelector(".main-section8-wrap .slides");
 const slide = document.querySelectorAll(".main-section8-wrap .slides li");
 console.log(slides);

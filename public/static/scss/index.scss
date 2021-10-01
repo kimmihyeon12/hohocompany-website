@@ -1,4 +1,187 @@
 .wrapper {
+   
+    .popup-wrap {
+        top:0;
+        width: 100vw;
+        height: 100vw;
+       
+;
+      visibility: hidden;
+        display: flex;
+        z-index: 100;
+        justify-content: center;
+
+        position: fixed;
+     
+        .popup {
+            margin-top: 7vw;
+           
+            overflow-y:scroll;
+            width: 60vw;
+            height: 25vw;
+            background-color: white;
+           
+
+            padding: 5.6vw;
+
+            .title {
+                .title-wrap{
+                    display: flex;
+                    align-items:flex-end;
+                    line-height: 2.8vw;
+                    h1 {
+                        font-size: 2.5vw;
+                        font-family: "NeoB";
+                    }
+                }
+               
+                p{
+                    margin-top: 1vw;
+                    font-size: 1vw;
+                    color:#434343;
+                    font-family: "NeoM";
+                }
+            }
+            .content1{
+                margin-top: 2vw;
+                h1{
+                    font-family: "NeoB";
+                    font-size: 1.5vw;
+                }
+                input{  
+                    border:none;
+                    border-bottom: 1.8px solid lightgray;
+                   padding-top: 1.5vw;
+                   padding-bottom: 0.5vw;
+                   width:  100%;
+                   //background-image: url(../img/header/logo.png) ;
+                   background-repeat:no-repeat;
+                   font-size: 1.2vw;
+                }
+                input:focus {outline:none;}
+                input::-webkit-input-placeholder {
+                    font-size: 1.2vw;
+                    text-align:initial;
+                    color:black;
+                    font-family: "NeoB";
+                  
+                  }
+                  
+            }
+            .content2{
+                margin-top: 2vw;
+
+                h1{
+                    font-family: "NeoB";
+                    font-size: 1.5vw;
+                }
+                input{  
+                    border:none;
+                    border-bottom: 1.8px solid lightgray;
+                   padding-top: 1.5vw;
+                   padding-bottom: 0.5vw;
+                   margin-bottom: 1.5vw;
+                   width:  100%;
+                   //background-image: url(../img/header/logo.png) ;
+                   background-repeat:no-repeat;
+                   font-size: 1.2vw;
+                
+                }
+                input:focus {outline:none;}
+                input::-webkit-input-placeholder {
+                 
+                    font-size: 1.2vw;
+                    text-align:initial;
+                    color:black;
+                    font-family: "NeoB";
+                  
+                  }
+                  textarea{
+                    margin-bottom: 1vw;
+                    font-size: 1.2vw;
+                    border:  1px solid lightgray;
+                    width:  97%;
+                    border-radius: 1vw;
+                    padding:1vw;
+                  }
+                  textarea::placeholder {
+                    color: #434343;
+                    font-family: "NeoM";
+                   
+                  }
+                
+                  
+            }
+            .content3{
+                margin-bottom: 3.5vw;
+                p{
+                    font-size: 1vw;
+                    font-family: "NeoM";
+                    margin-bottom: 1.5vw;
+                }
+                .file-btn{
+                  
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 11.6vw;
+                    }
+                }
+                
+            }
+            .content4{
+                border: 1px solid lightgray;
+                font-size: 0.9vw;
+                border-radius: 1vw;
+                padding:0.9vw;
+                font-family: "NeoM";
+
+            }
+            .content5{
+                margin-top: 4vw;
+                font-size: 1.2vw;
+                font-family: "NeoM";
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .check-btn{
+                    display: flex;
+                    align-items: center;
+                    strong{
+                        font-family: "NeoB";
+                    }
+                    input[type="checkbox"]{
+                        transform : scale(1.2);
+                        margin-right: 0.58vw;
+                    }
+                }
+                .click-btn{       margin-top: 4vw;
+                    display: flex;
+                    >div{
+                        font-family: "NeoB";
+                        display: flex;
+                      justify-content: center;
+                        align-items: center;
+                        border-radius: 0.5vw;
+                       font-size: 1vw;
+                        width: 12.5vw;
+                        height: 3vw;
+                        color:white;
+                     
+                       margin-left: 0.8vw;
+                      
+                    }
+                    .cancel{
+                        background-color: #c7c7c7;
+                    }
+                    .ok{
+                        background-color: #f93873;
+                    }
+                }
+            }
+        }
+    }
 
     .header {
         margin-top: 2.8vw;
@@ -43,7 +226,9 @@
     .content {
         position: absolute;
         top: 0;
-        border: 1px solid black;
+        width: 100vw;
+
+
 
         .main-section1-wrap {
             .slider-button {
@@ -825,7 +1010,7 @@
                             }
 
 
-                            .clickbtn {
+                            .clickbtn1 {
                                 z-index: 10;
                             }
 
@@ -888,7 +1073,7 @@
 
                         }
 
-                        .clickbtn {
+                        .clickbtn2 {
                             z-index: 10;
                         }
 
@@ -929,8 +1114,9 @@
                 margin-top: 6vw;
                 position: relative;
                 height: 30vw;
+
                 .img-wrap {
-                
+
 
                     img {
                         position: absolute;
@@ -974,16 +1160,87 @@
                 }
             }
         }
-        footer{
+
+        footer {
             width: 100vw;
             height: 15vw;
             background-color: #2b2b2b;
             display: flex;
             justify-content: center;
-            .footer-wrap{
-width: 80%;
+
+            .footer-wrap {
+                width: 80%;
+
+
+                .title {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 1.6vw;
+                    margin-bottom: 1vw;
+
+                    .logo {
+                        width: 10vw;
+                        margin-right: 3.6vw;
+
+                    }
+
+                    p {
+                        color: white;
+                        font-size: 1vw;
+
+                        font-family: "NeoL";
+                    }
+
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 26.9vw;
+
+                        li {
+                            margin-left: 1.5vw;
+                        }
+
+                        .facebook {
+                            width: 0.7vw;
+                        }
+
+                        .twitter {
+                            width: 1.6vw;
+                        }
+
+                        .instagram {
+                            width: 1.8vw;
+                        }
+
+                        .blog {
+                            width: 1vw;
+                        }
+
+                        .youtube {
+                            width: 1.9vw;
+                        }
+                    }
+                }
+
+                .footer-hr {
+
+                    border: 1px solid #878787;
+                    background-color: #878787;
+                }
+
+                >p {
+                    margin-top: 1.5vw;
+                    color: #878787;
+                    font-size: 1vw;
+                    font-family: "NeoL";
+                    line-height: 1.8vw;
+
+                }
             }
-           
+
         }
+
+
     }
+
 }
