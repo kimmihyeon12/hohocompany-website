@@ -12,6 +12,7 @@ const loadingBar = document.querySelector(".main-section1-wrap .bar");
 const leftNumber = document.querySelector(".main-section1-wrap .left-number");
 const rightNumber = document.querySelector(".main-section1-wrap .right-number");
 const popupWrap = document.querySelector(".popup-wrap");
+const popupWrap1 = document.querySelector(".popup-wrap1");
 const play = document.querySelector(".main-section1-wrap .play");
 const body = document.querySelector("body");
 let count = 0;
@@ -19,12 +20,34 @@ let boxWid = 10;
 let playBtn = true;
 
 const togetherBtn = document.querySelector(".clickbtn1");
+const communicationBtn = document.querySelector(".clickbtn2");
 const popup = document.querySelector(".popup-wrap");
-
+const popup1 = document.querySelector(".popup-wrap1");
 togetherBtn.addEventListener("click", () => {
     popup.style.visibility = `visible`;
     popupWrap.style.backgroundColor = `rgba(0, 0, 0, 0.6)`;
     body.style.overflow = `hidden`;
+
+})
+communicationBtn.addEventListener("click", () => {
+    console.log("hello");
+    popup1.style.visibility = `visible`;
+    popupWrap1.style.backgroundColor = `rgba(0, 0, 0, 0.6)`;
+    body.style.overflow = `hidden`;
+
+})
+popupWrap.addEventListener("click", (e) => {
+    if (e.target == popupWrap) {
+        popup.style.visibility = `hidden`;
+        body.style.overflow = `visible`;
+             }
+
+})
+popupWrap1.addEventListener("click", (e) => {
+    if (e.target == popupWrap1) {
+        popup1.style.visibility = `hidden`;
+        body.style.overflow = `visible`;
+    }
 
 })
 play.addEventListener("click", () => {

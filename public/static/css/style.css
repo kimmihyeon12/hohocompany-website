@@ -304,6 +304,140 @@ body {
             background-color: #c7c7c7; }
           body .wrapper .popup-wrap .popup .content5 .click-btn .ok {
             background-color: #f93873; }
+  body .wrapper .popup-wrap1 {
+    top: 0;
+    width: 100vw;
+    height: 100vw;
+    visibility: hidden;
+    display: flex;
+    z-index: 100;
+    justify-content: center;
+    position: fixed; }
+    body .wrapper .popup-wrap1 .popup {
+      margin-top: 7vw;
+      overflow-y: scroll;
+      width: 60vw;
+      height: 25vw;
+      background-color: white;
+      padding: 5.6vw; }
+      body .wrapper .popup-wrap1 .popup .title .title-wrap {
+        display: flex;
+        align-items: flex-end;
+        line-height: 2.8vw; }
+        body .wrapper .popup-wrap1 .popup .title .title-wrap h1 {
+          font-size: 2.5vw;
+          font-family: "NeoB"; }
+      body .wrapper .popup-wrap1 .popup .title p {
+        margin-top: 1vw;
+        font-size: 1vw;
+        color: #434343;
+        font-family: "NeoM"; }
+      body .wrapper .popup-wrap1 .popup .content1 {
+        margin-top: 2vw; }
+        body .wrapper .popup-wrap1 .popup .content1 h1 {
+          font-family: "NeoB";
+          font-size: 1.5vw; }
+        body .wrapper .popup-wrap1 .popup .content1 p {
+          margin-top: 0.5vw;
+          font-size: 1.0vw;
+          font-family: "NeoM";
+          color: #434343; }
+        body .wrapper .popup-wrap1 .popup .content1 input {
+          border: none;
+          border-bottom: 1.8px solid lightgray;
+          padding-top: 1.5vw;
+          padding-bottom: 0.5vw;
+          width: 100%;
+          background-repeat: no-repeat;
+          font-size: 1.2vw; }
+        body .wrapper .popup-wrap1 .popup .content1 input:focus {
+          outline: none; }
+        body .wrapper .popup-wrap1 .popup .content1 input::-webkit-input-placeholder {
+          font-size: 1.2vw;
+          text-align: initial;
+          color: black;
+          font-family: "NeoB"; }
+      body .wrapper .popup-wrap1 .popup .content2 {
+        margin-top: 2vw; }
+        body .wrapper .popup-wrap1 .popup .content2 h1 {
+          font-family: "NeoB";
+          font-size: 1.5vw; }
+        body .wrapper .popup-wrap1 .popup .content2 input {
+          border: none;
+          border-bottom: 1.8px solid lightgray;
+          padding-top: 1.5vw;
+          padding-bottom: 0.5vw;
+          margin-bottom: 1.5vw;
+          width: 100%;
+          background-repeat: no-repeat;
+          font-size: 1.2vw; }
+        body .wrapper .popup-wrap1 .popup .content2 input:focus {
+          outline: none; }
+        body .wrapper .popup-wrap1 .popup .content2 input::-webkit-input-placeholder {
+          font-size: 1.2vw;
+          text-align: initial;
+          color: black;
+          font-family: "NeoB"; }
+        body .wrapper .popup-wrap1 .popup .content2 textarea {
+          margin-bottom: 1vw;
+          font-size: 1.2vw;
+          border: 1px solid lightgray;
+          width: 97%;
+          border-radius: 1vw;
+          padding: 1vw; }
+        body .wrapper .popup-wrap1 .popup .content2 textarea::placeholder {
+          color: #434343;
+          font-family: "NeoM"; }
+      body .wrapper .popup-wrap1 .popup .content3 {
+        margin-bottom: 3.5vw; }
+        body .wrapper .popup-wrap1 .popup .content3 p {
+          font-size: 1vw;
+          font-family: "NeoM";
+          margin-bottom: 1.5vw; }
+        body .wrapper .popup-wrap1 .popup .content3 .file-btn {
+          display: flex;
+          justify-content: center; }
+          body .wrapper .popup-wrap1 .popup .content3 .file-btn img {
+            width: 11.6vw; }
+      body .wrapper .popup-wrap1 .popup .content4 {
+        border: 1px solid lightgray;
+        font-size: 0.9vw;
+        border-radius: 1vw;
+        padding: 0.9vw;
+        font-family: "NeoM"; }
+      body .wrapper .popup-wrap1 .popup .content5 {
+        margin-top: 4vw;
+        font-size: 1.2vw;
+        font-family: "NeoM";
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        body .wrapper .popup-wrap1 .popup .content5 .check-btn {
+          display: flex;
+          align-items: center; }
+          body .wrapper .popup-wrap1 .popup .content5 .check-btn strong {
+            font-family: "NeoB"; }
+          body .wrapper .popup-wrap1 .popup .content5 .check-btn input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 0.58vw; }
+        body .wrapper .popup-wrap1 .popup .content5 .click-btn {
+          margin-top: 4vw;
+          display: flex; }
+          body .wrapper .popup-wrap1 .popup .content5 .click-btn > div {
+            font-family: "NeoB";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.5vw;
+            font-size: 1vw;
+            width: 12.5vw;
+            height: 3vw;
+            color: white;
+            margin-left: 0.8vw; }
+          body .wrapper .popup-wrap1 .popup .content5 .click-btn .cancel {
+            background-color: #c7c7c7; }
+          body .wrapper .popup-wrap1 .popup .content5 .click-btn .ok {
+            background-color: #f93873; }
   body .wrapper .header {
     margin-top: 2.8vw;
     display: flex;
